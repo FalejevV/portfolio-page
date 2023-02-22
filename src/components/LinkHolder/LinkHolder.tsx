@@ -11,6 +11,7 @@ const LinkContainer = styled.div`
     justify-content: center;
     align-items: center;
     gap:30px;
+    user-select:none;
 `
 
 function LinkHolder(props:{

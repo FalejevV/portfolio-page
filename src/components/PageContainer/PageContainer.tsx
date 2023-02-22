@@ -5,9 +5,10 @@ import { PContainer } from "./PageContainer.styled";
 function PageContainer(props:{
     bgColor:string,
     name:string,
+    toggle:boolean,
 }){
     return(
-        <PContainer id={props.name} bgColor={props.bgColor}>
+        <PContainer toggle={props.toggle} id={props.name} bgColor={props.bgColor}>
             
         </PContainer>
     )
