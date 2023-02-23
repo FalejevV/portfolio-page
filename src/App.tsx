@@ -7,7 +7,9 @@ import OverlayGreenRadialGradient from "./components/OverlayGreenRadialGradient/
 
 const theme = {
     maxWidth:"1440px",
-    maxHeight:"1024px"
+    maxHeight:"1024px",
+    mainColor:"#17FF42",
+    dimmColor:"#17ff417e",
 }
 
 function App(){
