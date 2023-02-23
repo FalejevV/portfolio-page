@@ -28,4 +28,6 @@ export const PContainer = styled.div<{
 
     padding:0px 30px;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 `

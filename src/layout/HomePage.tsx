@@ -1,9 +1,7 @@
 import styled from "styled-components";
 import { PContainer } from "../styles/Style.styled";
-import UIBorderStat from "../components/UIBorderStat/UIBorderStat";
 import TopStatsBar from "./TopStatsBar";
-
-
+import BottomCornersUI from "./BottomCornersUI";
 
 function HomePage(props:{
     toggle:boolean;
@@ -11,6 +9,7 @@ function HomePage(props:{
     return(
         <PContainer toggle={props.toggle}>
             <TopStatsBar />
+            <BottomCornersUI />
         </PContainer>
     )
 }
