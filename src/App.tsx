@@ -12,14 +12,14 @@ const theme = {
 
 function App(){
 
-    const [page,setPage] = useState("first");
+    const [page,setPage] = useState("HOME");
 
     return(
         <ThemeProvider theme={theme}>
             <GlobalStyle />
             <MainContainer>
                 <OverlayGreenRadialGradient />
-                <HomePage />
+                <HomePage toggle={page === "HOME"} />
             </MainContainer>
         </ThemeProvider>
     )

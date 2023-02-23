@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 
 export const UIBorderStatContainer = styled.div`
     position:relative;
+    pointer-events:none;
 `
 
 

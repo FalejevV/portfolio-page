@@ -6,6 +6,7 @@ const TopStatsBarContainer = styled.div`
     gap:20px;
     width:100%;
     height:fit-content;
+    z-index: 4;
 `
 
 const BlankDivider = styled.div`

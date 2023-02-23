@@ -22,8 +22,8 @@ export const PContainer = styled.div<{
     left:0px;
     ${({ toggle }) => toggle && css`
         opacity:1;
-        pointer-events:none;
-        user-select:none;
+        pointer-events:unset;
+        user-select:unset;
     `}
 
     padding:0px 30px;

@@ -5,9 +5,11 @@ import TopStatsBar from "./TopStatsBar";
 
 
 
-function HomePage(){
+function HomePage(props:{
+    toggle:boolean;
+}){
     return(
-        <PContainer toggle={true}>
+        <PContainer toggle={props.toggle}>
             <TopStatsBar />
         </PContainer>
     )
