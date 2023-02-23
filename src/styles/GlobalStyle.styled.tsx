@@ -13,6 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     scroll-behavior: smooth;
     background-color: black;
+    font-family: 'VT323', monospace;
     }
 
     a {
@@ -27,5 +28,6 @@ export const GlobalStyle = createGlobalStyle`
     font-family: DM Sans, sans-serif;
     border:0px;
     scroll-behavior: smooth;
+    font-family: 'VT323', monospace;
     }
 `
