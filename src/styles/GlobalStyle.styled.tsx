@@ -29,5 +29,6 @@ export const GlobalStyle = createGlobalStyle`
     border:0px;
     scroll-behavior: smooth;
     font-family: 'VT323', monospace;
+    z-index: 5;
     }
 `

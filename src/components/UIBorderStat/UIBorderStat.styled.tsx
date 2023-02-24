@@ -1,11 +1,21 @@
 import styled, { css } from "styled-components";
 
-export const UIBorderStatContainer = styled.div`
+export const UIBorderStatContainer = styled.div<{
+    displayToggle?:boolean,
+    doDisplay?:boolean,
+}>`
     position:relative;
     pointer-events:none;
     display:flex;
     flex-direction: column;
     
+    ${({ displayToggle }) => displayToggle && css`
+        display: none;
+    `}
+
+    ${({ doDisplay }) => doDisplay && css`
+        display:flex;
+    `}
 `
 
 
@@ -32,7 +42,7 @@ export const UIStatProgressBar = styled.div<{
 `
 
 
-export const UIStatValueText = styled.p<{
+export const UIStatValueText = styled.div<{
     leftCorner?:boolean,
     rightCorner?:boolean,
     progress?:boolean,
@@ -100,6 +110,10 @@ export const UIStatValueText = styled.p<{
         border-bottom: 3px solid ${({ theme }) => theme.dimmColor || "red"};
         border-right:3px solid ${({ theme }) => theme.dimmColor || "red"};
     `}
+
+    @media(max-width:940px){
+        font-size:20px;
+    }
 `
 
 

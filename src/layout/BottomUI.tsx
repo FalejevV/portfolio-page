@@ -1,24 +1,29 @@
 import styled from "styled-components";
 import UIBorderBottomCorner from "../components/UIBorderBottomCorner/UIBorderBottomCorner";
+import Menu from "../components/Menu/Menu";
 
-const BCornersContainer = styled.div`
-    width:100%;
-    height:70px;
+
+const UIContainer = styled.div`
+    margin-top:36px;
+    width: 100%;
+    height: 70px;
     display: flex;
-    flex-wrap: nowrap;
     justify-content: space-between;
-    z-index: 4;
-    gap:100px;
 `
 
-function BottomCornersUI(){
+
+function BottomUI(props:{
+    page:string,
+    setPage:Function,
+}){
     return(
-        <BCornersContainer>
+        <UIContainer>
             <UIBorderBottomCorner leftTitleLineWidth="30%" leftCorner text={"0x37b"} />
+            <Menu setPage={props.setPage} page={props.page} />
             <UIBorderBottomCorner leftTitleLineWidth="314%" rightCorner text={"0x66f"} />
-        </BCornersContainer>
+        </UIContainer>
     )
 }
 
 
-export default BottomCornersUI;
+export default BottomUI;

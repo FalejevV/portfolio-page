@@ -1,14 +1,14 @@
 import { PContainer } from "../styles/Style.styled";
 
-function HomePage(props:{
+function WorkPage(props:{
     toggle:boolean;
 }){
     return(
         <PContainer toggle={props.toggle}>
-            HOME
+            WORK
         </PContainer>
     )
 }
 
 
-export default HomePage;
+export default WorkPage;

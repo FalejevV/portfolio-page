@@ -11,6 +11,7 @@ export const UIBBContainer = styled.div<{
     width:100%;
     max-width: 300px;
     opacity: 0.5;
+
     ${({ leftCorner }) => leftCorner && css`
         &:before{
             content: '';
@@ -36,6 +37,10 @@ export const UIBBContainer = styled.div<{
             background-color: ${({ theme }) => theme.dimmColor || "green"};
         }
     `}
+
+    @media(max-width: 900px){
+        display: none;
+    }
 `
 
 export const UIBBText = styled.p`

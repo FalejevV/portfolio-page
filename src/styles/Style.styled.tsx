@@ -6,28 +6,39 @@ export const MainContainer = styled.div`
     max-height: ${({ theme }) => theme.maxHeight || "1000px"};
     position: relative;
     margin: 0 auto;
+    overflow-x:hidden;
+    display: flex;
+    flex-direction: column;
+    padding:0px 30px;
+
+
+    @media(max-width:500px){
+        padding:10px;
+    }
 `
 
 export const PContainer = styled.div<{
     toggle:boolean,
 }>`
     width:100%;
-    height:100%;
-    border:2px solid green;
     opacity:0;
+    display: none;
     pointer-events:none;
     user-select:none;
-    position: absolute;
-    top:0px;
-    left:0px;
     ${({ toggle }) => toggle && css`
+        display: flex;
         opacity:1;
         pointer-events:unset;
         user-select:unset;
     `}
+    position:relative;
+    flex:1 auto;
 
     padding:0px 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+
+    background-color:#ffffff1b;
+    font-size: 40px;
+    
 `

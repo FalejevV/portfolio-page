@@ -4,6 +4,10 @@ import { ThemeProvider } from "styled-components";
 import HomePage from "./layout/HomePage";
 import { MainContainer } from "./styles/Style.styled";
 import OverlayGreenRadialGradient from "./components/OverlayGreenRadialGradient/OGRG";
+import BottomUI from "./layout/BottomUI";
+import TopStatsBar from "./layout/TopStatsBar";
+import WorkPage from "./layout/WorkPage";
+import ContactPage from "./layout/ContactPage";
 
 const theme = {
     maxWidth:"1440px",
@@ -21,7 +25,13 @@ function App(){
             <GlobalStyle />
             <MainContainer>
                 <OverlayGreenRadialGradient />
+                <TopStatsBar />
+
                 <HomePage toggle={page === "HOME"} />
+                <WorkPage toggle={page === "WORK"} />
+                <ContactPage toggle={page === "CONTACT"} />
+
+                <BottomUI setPage={setPage} page={page} />
             </MainContainer>
         </ThemeProvider>
     )
