@@ -38,6 +38,10 @@ export const PContainer = styled.div<{
     align-items: center;
     font-size: 40px;
     padding:50px 0px;
+
+    @media(max-width:880px){
+        padding-bottom: 20px;
+    }
 `
 
 export const PText = styled.p<{
@@ -47,6 +51,6 @@ export const PText = styled.p<{
     color${({ theme }) => theme.mainColor || "red"};
     text-align: ${({ textAlign }) => textAlign || "center"};
     @media(max-width:1000px){
-        font-size:20px;
+        font-size:22px;
     }
 `

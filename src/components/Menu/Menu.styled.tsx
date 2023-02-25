@@ -75,6 +75,5 @@ export const MenuButton = styled.button<{
 
     @media(max-width: 900px){
         min-width: 100px;
-        font-size:20px;
     }
 `

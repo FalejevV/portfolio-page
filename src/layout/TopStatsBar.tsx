@@ -84,7 +84,6 @@ function TopStatsBar(){
         }
     },[displayToggle]);
 
-    console.log(displayToggle);
     return(
         <TopStatsBarContainer>
             <UIBorderStat leftCorner leftTitleLineWidth="40%" title="USER" value="Vladimir Falejev 24y/o" />

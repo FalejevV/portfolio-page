@@ -24,7 +24,8 @@ export const  UserIntroContainer = styled.div`
 
 export const UserAboutContainer = styled.div`
     width:100%;
-    max-height: 135px;
+    height:100%;
+    max-height: 100px;
     overflow-x:hidden;
     overflow-y: scroll;
 `
