@@ -16,6 +16,8 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'VT323', monospace;
     }
 
+    
+
     a {
     color: inherit;
     text-decoration: none;
@@ -30,5 +32,9 @@ export const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
     font-family: 'VT323', monospace;
     z-index: 5;
+    pointer-events: auto;
+    scrollbar-width: thin;
+
+    scrollbar-color: #17FF42 transparent;
     }
 `

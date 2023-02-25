@@ -8,7 +8,7 @@ const TopStatsBarContainer = styled.div`
     width:100%;
     height:fit-content;
     z-index: 4;
-
+    padding-top:35px;
     @media(max-width:500px){
         margin-top:-20px;
         height: 150px;

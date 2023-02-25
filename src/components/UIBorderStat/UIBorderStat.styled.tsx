@@ -3,18 +3,23 @@ import styled, { css } from "styled-components";
 export const UIBorderStatContainer = styled.div<{
     displayToggle?:boolean,
     doDisplay?:boolean,
+    gCol?:string,
 }>`
     position:relative;
     pointer-events:none;
     display:flex;
     flex-direction: column;
-    
+    margin-top:-35px;
     ${({ displayToggle }) => displayToggle && css`
         display: none;
     `}
 
     ${({ doDisplay }) => doDisplay && css`
         display:flex;
+    `}
+
+    ${({ gCol }) => gCol && css`
+        grid-column: ${gCol};
     `}
 `
 
@@ -47,15 +52,19 @@ export const UIStatValueText = styled.div<{
     rightCorner?:boolean,
     progress?:boolean,
     fullCorner?:boolean,
+    noBottom?:boolean,
+    noRight?:boolean,
+    noLeft?:boolean,
+    textAlign?:string,
 }>`
     width:100%;
     padding:15px 25px;
     padding-top:25px;
-
+    padding-bottom:25px;
     color:${({ theme }) => theme.mainColor || "green"};
     font-size:24px;
     position:relative;
-    text-align: center;
+    text-align: ${({ textAlign }) => textAlign ||"center"};
 
     ${({ leftCorner }) => leftCorner && css`
         border-left:3px solid ${({ theme }) => theme.dimmColor || "red"};
@@ -111,7 +120,19 @@ export const UIStatValueText = styled.div<{
         border-right:3px solid ${({ theme }) => theme.dimmColor || "red"};
     `}
 
-    @media(max-width:940px){
+    ${({ noBottom }) => noBottom && css`
+        border-bottom: 0px;
+    `}
+
+    ${({ noRight }) => noRight && css`
+        border-right: 0px;
+    `}
+
+    ${({ noLeft }) => noLeft && css`
+        border-left: 0px;
+    `}
+
+    @media(max-width:1000px){
         font-size:20px;
     }
 `

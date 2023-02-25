@@ -10,8 +10,7 @@ export const UIBBContainer = styled.div<{
     position: relative;
     width:100%;
     max-width: 300px;
-    opacity: 0.5;
-
+    
     ${({ leftCorner }) => leftCorner && css`
         &:before{
             content: '';
@@ -19,7 +18,7 @@ export const UIBBContainer = styled.div<{
             width:3px;
             height:70px;
             position: absolute;
-            bottom: 1.5px;
+            bottom: -1.5px;
             transform: translateY(-50%);
             background-color: ${({ theme }) => theme.dimmColor || "green"};
         }
@@ -32,7 +31,7 @@ export const UIBBContainer = styled.div<{
             width:3px;
             height:70px;
             position: absolute;
-            bottom: 1.5px;
+            bottom: -1.5px;
             transform: translateY(-50%);
             background-color: ${({ theme }) => theme.dimmColor || "green"};
         }

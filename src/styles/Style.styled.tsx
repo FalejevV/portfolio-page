@@ -33,12 +33,20 @@ export const PContainer = styled.div<{
     `}
     position:relative;
     flex:1 auto;
-
-    padding:0px 30px;
+    
     justify-content: center;
     align-items: center;
-
-    background-color:#ffffff1b;
     font-size: 40px;
-    
+    padding:50px 0px;
+`
+
+export const PText = styled.p<{
+    textAlign?:string,
+}>`
+    font-size: 27px;
+    color${({ theme }) => theme.mainColor || "red"};
+    text-align: ${({ textAlign }) => textAlign || "center"};
+    @media(max-width:1000px){
+        font-size:20px;
+    }
 `
