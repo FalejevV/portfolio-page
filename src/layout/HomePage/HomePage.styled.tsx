@@ -37,8 +37,8 @@ export const AlertSVG = styled.svg`
 
 export const UserSkillsContainer = styled.div`
     width:100%;
-    height:425px;
-    max-height:425px;
+    height:420px;
+    max-height:420px;
     overflow-y: scroll;
     position: relative;
     z-index: 1000;    
