@@ -9,6 +9,11 @@ export const HomePageGrid = styled.div`
     grid-auto-rows: min-content;
     position: relative;
     z-index: 10;
+
+    @media(max-width:940px){
+        display: flex;
+        flex-direction: column;
+    }
 `
 
 export const  UserIntroContainer = styled.div`
@@ -17,9 +22,9 @@ export const  UserIntroContainer = styled.div`
     align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
-    gap:20px;
     width:100%;
     margin-top:-10px;
+    height:30px;
 `
 
 export const UserAboutContainer = styled.div`
@@ -31,16 +36,20 @@ export const UserAboutContainer = styled.div`
 `
 
 export const AlertSVG = styled.svg`
-    width:34px;
-    height:34px;
+    width:31px;
+    height:31px;
     fill:${({ theme }) => theme.mainColor || "red"};
 `
 
 export const UserSkillsContainer = styled.div`
     width:100%;
+    padding:1px;
     height:420px;
     max-height:420px;
     overflow-y: scroll;
     position: relative;
-    z-index: 1000;    
+
+    @media(max-width:940px){
+        max-height: 360px;
+    }
 `

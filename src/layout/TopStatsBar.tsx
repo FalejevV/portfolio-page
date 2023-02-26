@@ -81,6 +81,18 @@ function TopStatsBar(){
 
         return () => {
             clearInterval(timer);
+
+            window.removeEventListener('resize', () => {
+                if(window.innerWidth <= 940){
+                    if(!displayToggle){
+                        setDisplayToggle(true);
+                    }
+                }else{
+                    if(displayToggle){
+                        setDisplayToggle(false);
+                    }
+                }
+            })
         }
     },[displayToggle]);
 

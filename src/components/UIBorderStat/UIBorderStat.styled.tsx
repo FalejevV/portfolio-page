@@ -163,4 +163,8 @@ export const UIStatTitleText = styled.p`
     color:${({ theme }) => theme.dimmColor || "red"};
     font-size:30px;
     white-space: nowrap;
+
+    @media(max-width:500px){
+        font-size: 24px;
+    }
 `

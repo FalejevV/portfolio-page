@@ -76,4 +76,8 @@ export const MenuButton = styled.button<{
     @media(max-width: 900px){
         min-width: 100px;
     }
+
+    @media(max-width: 400px){
+        min-width: 80px;
+    }
 `

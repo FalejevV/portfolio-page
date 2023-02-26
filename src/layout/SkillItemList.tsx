@@ -8,12 +8,13 @@ import jsIcon from "../img/skill-icons/javascript.svg";
 import nextIcon from "../img/skill-icons/next-js.svg";
 import reactIcon from "../img/skill-icons/react.svg";
 import styledIcon from "../img/skill-icons/styled.svg";
+import expressIcon from "../img/skill-icons/express.svg";
 
 
 const SkillItemsContainer = styled.div`
     padding:5px 0px;
-    display: grid;
-    grid-template-columns: repeat(6,minmax(80px,120px));
+    display:flex;
+    flex-wrap: wrap;
     gap:20px;
     width:100%;
 `
@@ -29,6 +30,7 @@ function SkillItemList(){
             <SkillItem icon={reactIcon} skillName={"React"}  />
             <SkillItem icon={styledIcon} skillName={"Styled"}  />
             <SkillItem opacity="0.3" icon={nextIcon} skillName={"NextJS"}  />
+            <SkillItem opacity="0.2" icon={expressIcon} skillName={"ExpressJS"}  />
         </SkillItemsContainer>
     )
 }

@@ -6,6 +6,7 @@ export const SkillItemContainer = styled.div<{
 }>`
 
     width:100%;
+    max-width: 120px;
     aspect-ratio:1/1;
     background-color:${({ theme }) => theme.mainColor || "red"};
     padding:10px;

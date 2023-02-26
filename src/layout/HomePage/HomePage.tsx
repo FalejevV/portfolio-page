@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import UIBorderStat from "../../components/UIBorderStat/UIBorderStat";
 import { PContainer, PText } from "../../styles/Style.styled";
 import SkillItemList from "../SkillItemList";
@@ -6,10 +7,52 @@ import { AlertSVG, HomePageGrid, UserAboutContainer, UserIntroContainer, UserSki
 function HomePage(props:{
     toggle:boolean;
 }){
+
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+    useEffect(() => {
+        if(window.innerWidth <= 940){
+            if(!isSmallScreen){
+                setIsSmallScreen(true);
+            }
+        }
+
+        window.addEventListener('resize', () => {
+            if(window.innerWidth <= 940){
+                if(!isSmallScreen){
+                    setIsSmallScreen(true);
+                }
+            }else{
+                if(isSmallScreen){
+                    setIsSmallScreen(false);
+                }
+            }
+        })
+
+        return () => {
+            window.removeEventListener('resize', () => {
+                if(window.innerWidth <= 940){
+                    if(!isSmallScreen){
+                        setIsSmallScreen(true);
+                    }
+                }else{
+                    if(isSmallScreen){
+                        setIsSmallScreen(false);
+                    }
+                }
+            })
+        }
+
+    },[isSmallScreen]);
+
     return(
         <PContainer toggle={props.toggle}>
             <HomePageGrid>
-                <UIBorderStat leftTitleLineWidth="85px" noRight noBottom fullCorner title={"STATUS"} element={<PText textAlign="left">Jr. Frontend Developer</PText>} />
+                <UIBorderStat leftTitleLineWidth="85px" noRight={!isSmallScreen} noBottom fullCorner title={"STATUS"} element={
+                    <UserIntroContainer>
+                        <PText textAlign="left">Jr. Frontend Developer</PText>
+                    </UserIntroContainer>
+                } />
                 <UIBorderStat noBottom leftTitleLineWidth="16%" fullCorner title={"USER INTRO"} element={
                     <UserIntroContainer>
                         <AlertSVG viewBox="0 0 24 24" width="24" height="24">
