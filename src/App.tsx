@@ -5,7 +5,7 @@ import { MainContainer } from "./styles/Style.styled";
 import OverlayGreenRadialGradient from "./components/OverlayGreenRadialGradient/OGRG";
 import BottomUI from "./layout/BottomUI";
 import TopStatsBar from "./layout/TopStatsBar";
-import WorkPage from "./layout/WorkPage";
+import WorkPage from "./layout/WorkPage/WorkPage";
 import ContactPage from "./layout/ContactPage";
 import HomePage from "./layout/HomePage/HomePage";
 

@@ -46,6 +46,7 @@ export const PContainer = styled.div<{
 
 export const PText = styled.p<{
     textAlign?:string,
+    dimm?:boolean
 }>`
     font-size: 27px;
     color${({ theme }) => theme.mainColor || "red"};
@@ -53,4 +54,9 @@ export const PText = styled.p<{
     @media(max-width:1000px){
         font-size:22px;
     }
+
+    ${({ dimm }) => dimm && css`
+        color:${({ theme }) => theme.dimmColor || "gray"};
+        filter:brightness(1.2);
+    `}
 `

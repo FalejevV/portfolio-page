@@ -98,7 +98,7 @@ function TopStatsBar(){
 
     return(
         <TopStatsBarContainer>
-            <UIBorderStat leftCorner leftTitleLineWidth="40%" title="USER" value="Vladimir Falejev 24y/o" />
+            <UIBorderStat leftCorner leftTitleLineWidth="40%" title="USER" value="Vladimir Falejev" />
             <StatsWindow>
                 <LangContainer doDisplay={displayTimer >= 0 && displayTimer <= 2 && displayToggle}>
                     <UIBorderStat displayToggle={displayToggle} doDisplay={displayTimer === 0 && displayToggle} leftTitleLineWidth="100%" title="ENG" value="65%" />
