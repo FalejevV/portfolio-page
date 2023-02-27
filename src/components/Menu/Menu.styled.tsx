@@ -14,7 +14,7 @@ export const MenuContainer = styled.div`
 
     @media(max-width: 900px){
         padding: 0px 0px;
-        padding-bottom: 15px;
+        padding-bottom: 0px;
         gap:10px;
     }
 `

@@ -29,8 +29,7 @@ export const  UserIntroContainer = styled.div`
 
 export const UserAboutContainer = styled.div`
     width:100%;
-    height:100%;
-    max-height: 100px;
+    height:200px;
     overflow-x:hidden;
     overflow-y: scroll;
 `
@@ -44,12 +43,12 @@ export const AlertSVG = styled.svg`
 export const UserSkillsContainer = styled.div`
     width:100%;
     padding:1px;
-    height:420px;
-    max-height:420px;
+    height:317px;
+    max-height:317px;
     overflow-y: scroll;
     position: relative;
 
     @media(max-width:940px){
-        max-height: 360px;
+        max-height: 270px;
     }
 `
