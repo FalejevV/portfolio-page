@@ -49,7 +49,7 @@ export const PText = styled.p<{
     dimm?:boolean
 }>`
     font-size: 27px;
-    color${({ theme }) => theme.mainColor || "red"};
+    color:${({ theme }) => theme.mainColor || "red"};
     text-align: ${({ textAlign }) => textAlign || "center"};
     @media(max-width:1000px){
         font-size:22px;

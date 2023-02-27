@@ -1,9 +1,10 @@
 import UIBorderStat from "../../components/UIBorderStat/UIBorderStat";
 import WorkRow from "../../components/WorkRow/WorkRow";
 import { PContainer, PText } from "../../styles/Style.styled";
-import { WPCreationListGrid, WorkPageContainer } from "./WorkPage.styled";
+import { WPCreationListGrid, WPProjectReviewContainer, WPProjectReviewMainContainer, WorkPageContainer } from "./WorkPage.styled";
 import projects from "../../projects";
 import { useState } from "react";
+import WorkAbout from "../../components/WorkAbout/WorkAbout";
 
 
 function WorkPage(props:{
@@ -16,13 +17,21 @@ function WorkPage(props:{
     return(
         <PContainer toggle={props.toggle}>
             <WorkPageContainer>
-                <UIBorderStat fullCorner title={"USER CREATIONS"} element={
+                <UIBorderStat leftTitleLineWidth="11%" fullCorner title={"USER CREATIONS"} element={
                     <WPCreationListGrid>
                         <PText dimm textAlign="left">Active</PText>
                         <PText dimm textAlign="left">Project Name</PText>
                         {projects.map((project,index:number) => <WorkRow key={index} onClick={() => setCurrentProject(index)} name={project.name} toggle={currentProject===index} />)}
                     </WPCreationListGrid>
                 }/>
+
+                <WPProjectReviewContainer>
+                    <WPProjectReviewMainContainer>
+                        <WorkAbout data={projects[currentProject]} />
+                    </WPProjectReviewMainContainer>
+
+                    <UIBorderStat leftTitleLineWidth="20%" title={"USED TOOLS"} noBottom noLeft noRight />
+                </WPProjectReviewContainer>
             </WorkPageContainer>
         </PContainer>
     )

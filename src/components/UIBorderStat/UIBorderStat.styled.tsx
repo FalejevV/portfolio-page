@@ -126,10 +126,16 @@ export const UIStatValueText = styled.div<{
 
     ${({ noRight }) => noRight && css`
         border-right: 0px;
+        &:before{
+            display:none;
+        }
     `}
 
     ${({ noLeft }) => noLeft && css`
         border-left: 0px;
+        &:after{
+            display:none;
+        }
     `}
 
     @media(max-width:1000px){
