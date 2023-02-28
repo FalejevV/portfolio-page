@@ -2,14 +2,14 @@ import styled from "styled-components";
 import SkillItem from "../components/SkillItem/SkillItem";
 
 
-import cssIcon from "../img/skill-icons/CSS.svg";
-import teaIcon from "../img/skill-icons/Tea.svg";
-import htmlIcon from "../img/skill-icons/HTML.svg";
-import jsIcon from "../img/skill-icons/JS.svg";
-import nextIcon from "../img/skill-icons/NextJS.svg";
-import reactIcon from "../img/skill-icons/React.svg";
-import styledIcon from "../img/skill-icons/Styled.svg";
-import expressIcon from "../img/skill-icons/ExpressJS.svg";
+import cssIcon from "../img/skill-icons/css.svg";
+import teaIcon from "../img/skill-icons/tea.svg";
+import htmlIcon from "../img/skill-icons/html.svg";
+import jsIcon from "../img/skill-icons/js.svg";
+import nextIcon from "../img/skill-icons/next.svg";
+import reactIcon from "../img/skill-icons/react.svg";
+import styledIcon from "../img/skill-icons/styled.svg";
+import expressIcon from "../img/skill-icons/express.svg";
 
 
 const SkillItemsContainer = styled.div`
