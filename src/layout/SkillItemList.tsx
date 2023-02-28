@@ -3,8 +3,6 @@ import SkillItem from "../components/SkillItem/SkillItem";
 
 
 import cssIcon from "../img/skill-icons/css.svg";
-
-import teaIcon from "../img/skill-icons/tea.svg";
 import htmlIcon from "../img/skill-icons/html.svg";
 import jsIcon from "../img/skill-icons/js.svg";
 import nextIcon from "../img/skill-icons/next.svg";
@@ -26,7 +24,6 @@ const SkillItemsContainer = styled.div`
 function SkillItemList(){
     return(
         <SkillItemsContainer>
-            <SkillItem opacity="0.8" icon={teaIcon} skillName={"Tea"}  />
             <SkillItem icon={cssIcon} skillName={"CSS"}  />
             <SkillItem icon={htmlIcon} skillName={"HTML"}  />
             <SkillItem icon={jsIcon} skillName={"JS"}  />
