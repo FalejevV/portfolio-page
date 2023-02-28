@@ -60,3 +60,33 @@ export const PText = styled.p<{
         filter:brightness(1.2);
     `}
 `
+
+export const Link = styled.a`
+    text-decoration: underline;
+    padding:5px 20px;
+    font-size: 22px;
+    color:${({ theme }) => theme.mainColor || "red"};
+    background-color: transparent;
+    transition: all 0.3s;
+    
+    position:relative;
+
+    &:after{
+        transition: all 0.05s;
+        position:absolute;
+        content: "";
+        width:100%;
+        height:0px;
+        left:0px;
+        bottom:0px;
+        background-color:${({ theme }) => theme.mainColor || "red"};
+        z-index: -1;
+    }
+
+    &:hover{
+        &:after{
+            height:100%;
+        }
+        color:black;
+    }
+`

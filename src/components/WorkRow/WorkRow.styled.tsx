@@ -11,6 +11,7 @@ export const WorkRowContainer = styled.div`
     
     @media(max-width:1000px){
         padding-left:15px;
+        align-items: flex-start;
     }
 `
 

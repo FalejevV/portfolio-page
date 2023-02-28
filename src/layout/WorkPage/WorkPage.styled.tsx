@@ -4,7 +4,6 @@ export const WorkPageContainer = styled.div`
     width:100%;
     height:100%;
     display: flex;
-    user-select: none;
 `
 
 export const WPCreationListGrid = styled.div`
@@ -19,6 +18,9 @@ export const WPCreationListGrid = styled.div`
     
     @media(max-width:1000px){
         grid-auto-rows:35px;
+        max-width: 300px;
+        grid-auto-rows:max-content;
+        row-gap:20px;
     }
 `
 
@@ -38,4 +40,15 @@ export const WPProjectReviewMainContainer = styled.div`
     width:100%;
     overflow-x:hidden;
     overflow-y:scroll;
+`
+
+export const TagsContainer = styled.div`
+    gap:10px;
+    display: flex;
+    width:100%;
+    height:100%;
+    max-height: 100px;
+    flex-wrap: wrap;
+    overflow-x:hidden;
+    overflow-y: scroll;
 `
