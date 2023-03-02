@@ -1,49 +1,14 @@
-import { useEffect, useState } from "react";
 import UIBorderStat from "../../components/UIBorderStat/UIBorderStat";
 import { PContainer, PText } from "../../styles/Style.styled";
 import SkillItemList from "../SkillItemList";
 import { AlertSVG, HomePageGrid, UserAboutContainer, UserIntroContainer, UserSkillsContainer } from "./HomePage.styled";
+import useSmallScreenEffect from "../../hooks/useSmallScreenEffect";
 
 function HomePage(props:{
     toggle:boolean;
 }){
 
-    const [isSmallScreen, setIsSmallScreen] = useState(false);
-
-    useEffect(() => {
-        if(window.innerWidth <= 940){
-            if(!isSmallScreen){
-                setIsSmallScreen(true);
-            }
-        }
-
-        window.addEventListener('resize', () => {
-            if(window.innerWidth <= 940){
-                if(!isSmallScreen){
-                    setIsSmallScreen(true);
-                }
-            }else{
-                if(isSmallScreen){
-                    setIsSmallScreen(false);
-                }
-            }
-        })
-
-        return () => {
-            window.removeEventListener('resize', () => {
-                if(window.innerWidth <= 940){
-                    if(!isSmallScreen){
-                        setIsSmallScreen(true);
-                    }
-                }else{
-                    if(isSmallScreen){
-                        setIsSmallScreen(false);
-                    }
-                }
-            })
-        }
-
-    },[isSmallScreen]);
+    const [isSmallScreen] = useSmallScreenEffect();
 
     return(
         <PContainer toggle={props.toggle}>

@@ -9,6 +9,10 @@ export const WorkAboutContainer = styled.div`
     flex-direction: column;
     gap:25px;
     position:relative;
+
+    @media(max-width:940px){
+        height: 540px;
+    }
 `
 
 export const WorkAboutTitle = styled(PText)`
@@ -16,6 +20,10 @@ export const WorkAboutTitle = styled(PText)`
 
     @media(max-width:1200px){
         font-size:24px;
+    }
+
+    @media(max-width:650px){
+        font-size:22px;
     }
 `
 
@@ -36,6 +44,10 @@ export const WorkAboutText = styled(PText)`
     &:hover{
         opacity: 1;
     }
+
+    @media(max-width:650px){
+        font-size:20px;
+    }
 `
 export const WorkAboutImageContainer = styled.div`
     display: flex;
@@ -44,6 +56,8 @@ export const WorkAboutImageContainer = styled.div`
     max-height: 200px;
     overflow: scroll;
     position:relative;
+
+    
 `
 
 export const WorkAboutImages = styled.div`

@@ -9,6 +9,10 @@ export const WorkRowContainer = styled.div`
     padding-left: 20px;
     gap:30px;
     
+    @media(max-width:1270px){
+        align-items: flex-start;
+    }
+
     @media(max-width:1000px){
         padding-left:15px;
         align-items: flex-start;

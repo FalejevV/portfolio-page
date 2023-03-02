@@ -9,7 +9,7 @@ const projects:IProject[]= [
         ],
         liveLink:"https://iaeround.xyz/",
         sourceLink:"https://github.com/FalejevV/iaeround-frontend",
-        usedTools:["HTML/CSS/JS", "Styled", "React", "NextJS", "ExpressJS", "Google-Storage", "JWToken", "AWS-PostgreSQL", "ALotOfPain"],
+        usedTools:["HTML/CSS/JS", "Styled", "React", "Redux", "NextJS", "ExpressJS", "Google-Storage", "JWToken", "AWS-PostgreSQL", "*ALotOfPain*"],
     },
     {
         name:"<DIV> Game </DIV>",
@@ -33,7 +33,7 @@ const projects:IProject[]= [
         ],
         liveLink:"https://google.com",
         sourceLink:"https://google.com",
-        usedTools:["ass","ass2","ass3"],
+        usedTools:["HTML/CSS/JS", "Styled", "React", "*maybe* API"],
     },
 ]
 

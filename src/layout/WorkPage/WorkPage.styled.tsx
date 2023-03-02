@@ -6,6 +6,7 @@ export const WorkPageContainer = styled.div`
     display: flex;
 `
 
+
 export const WPCreationListGrid = styled.div`
     display: grid;
     height:639px;
@@ -15,6 +16,11 @@ export const WPCreationListGrid = styled.div`
     grid-auto-rows:40px;
     column-gap:20px;
 
+    @media(max-width:1270px){
+        max-width: 370px;
+        grid-auto-rows:max-content;
+        row-gap:20px;
+    }
     
     @media(max-width:1000px){
         grid-auto-rows:35px;
@@ -51,4 +57,20 @@ export const TagsContainer = styled.div`
     flex-wrap: wrap;
     overflow-x:hidden;
     overflow-y: scroll;
+`
+
+
+
+export const MobileContainer = styled(WorkPageContainer)`
+    flex-direction: column;
+    width:100%;
+    gap:50px;
+    max-height: unset;
+    overflow-y: scroll;
+    max-height: 700px;
+    padding-top: 4px;
+
+    ${WPProjectReviewContainer}{
+        border:3px solid ${({ theme }) => theme.dimmColor || "red"};
+    }
 `

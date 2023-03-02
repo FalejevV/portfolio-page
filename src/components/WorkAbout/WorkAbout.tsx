@@ -9,6 +9,7 @@ import { Link } from "../../styles/Style.styled";
 function WorkAbout(props:{
     data:IProject
 }){
+    
     return(
         <WorkAboutContainer>
             <WorkAboutTitleContainer>

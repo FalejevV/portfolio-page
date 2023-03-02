@@ -38,7 +38,6 @@ export const PContainer = styled.div<{
     align-items: center;
     font-size: 40px;
     padding:50px 0px;
-
     @media(max-width:880px){
         padding-bottom: 20px;
     }

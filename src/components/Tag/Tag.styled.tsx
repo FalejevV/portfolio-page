@@ -12,4 +12,9 @@ export const TagText = styled.p`
     &:hover{
         opacity:1;
     }
+
+    @media(max-width:650px){
+        font-size:18px;
+        padding:5px 10px;
+    }
 `

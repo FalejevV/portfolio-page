@@ -23,16 +23,30 @@ export const SkillItemContainer = styled.div<{
     &:hover{
         opacity:1;
     }
+
+    @media(max-width:600px){
+        max-width: 70px;
+        max-height: 70px;
+    }
 `
 
 export const SkillImage = styled.img`
     width:100%;
     max-width:70px;
     aspect-ratio: 1/1;
+
+    @media(max-width:600px){
+        max-width: 30px;
+        max-height: 30px;
+    }
 `
 
 export const SkillName = styled(PText)`
     color:black;
     font-weight:bold;
     font-size:22px;
+
+    @media(max-width:600px){
+        font-size:18px;
+    }
 `
