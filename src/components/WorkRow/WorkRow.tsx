@@ -7,7 +7,7 @@ function WorkRow(props:{
     name:string,
     onClick:Function,
 }){
-    console.log(props.toggle);
+    
     return(
         <WorkRowContainer onClick={() => props.onClick()}>
             <WorkRowIndicator toggle={props.toggle}></WorkRowIndicator>

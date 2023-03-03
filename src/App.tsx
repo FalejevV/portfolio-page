@@ -6,8 +6,8 @@ import OverlayGreenRadialGradient from "./components/OverlayGreenRadialGradient/
 import BottomUI from "./layout/BottomUI";
 import TopStatsBar from "./layout/TopStatsBar";
 import WorkPage from "./layout/WorkPage/WorkPage";
-import ContactPage from "./layout/ContactPage";
 import HomePage from "./layout/HomePage/HomePage";
+import ContactPage from "./layout/ContactPage/ContactPage";
 
 const theme = {
     maxWidth:"1440px",
