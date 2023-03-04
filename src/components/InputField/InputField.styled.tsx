@@ -4,7 +4,19 @@ export const InputContainer = styled.div`
     width:380px;
     height:50px;
     position: relative;
-    display:flex;   
+    display:flex;
+
+    @media(max-width:520px){
+        width:300px;
+    }
+
+    @media(max-width:420px){
+        width:250px;
+    }
+
+    @media(max-width:350px){
+        width:200px;
+    }
 `
 
 const blink = keyframes`
@@ -82,4 +94,22 @@ export const InputFieldLabel = styled.label`
     width:100%;
     height:100%;
     border:3px solid ${({ theme }) => theme.dimmColor || "red"};
+`
+
+
+export const InputPlaceholder = styled.p<{
+    toggle:boolean;
+}>`
+    position: absolute;
+    left:10px;
+    top:50%;
+    transform: translateY(-50%);
+    color: ${({ theme }) => theme.mainColor || "red"};
+
+    opacity: 0.6;
+
+    ${({ toggle }) => toggle && css`
+        opacity: 0.4;
+        top:-15px;
+    `}
 `

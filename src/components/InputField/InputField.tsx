@@ -1,5 +1,5 @@
 import { ChangeEvent, SyntheticEvent, useEffect, useState } from "react";
-import { InputContainer, InputCursor, InputFieldLabel, InputTextField } from "./InputField.styled";
+import { InputContainer, InputCursor, InputFieldLabel, InputPlaceholder, InputTextField } from "./InputField.styled";
 import useSmallScreenEffect from "../../hooks/useSmallScreenEffect";
 
 
@@ -33,11 +33,12 @@ function InputField(props:{
             return;
         }
         let target = e.target as HTMLInputElement;
-        target.setSelectionRange(-1,-1);
+        target.setSelectionRange(target.value.length,target.value.length);
     }
     return(
         <InputContainer>
             <InputTextField mobile={smallScreen || isPhone} onSelect={(e) => selectorPosition(e)} symbolCount={value.length} onBlur={() => setIsFocused(false)} onFocus={(e) => {setIsFocused(true); selectorPosition(e)}} id={props.name} value={value} onChange={(e) => changeValue(e)} type="text" />
+            <InputPlaceholder toggle={value.trim() !== "" || isFocused}>{props.title}</InputPlaceholder>
             <InputCursor mobile={smallScreen || isPhone} focused={isFocused}></InputCursor>
             <InputFieldLabel htmlFor={props.name}></InputFieldLabel>
         </InputContainer>
