@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 export const InputContainer = styled.div`
     width:380px;
@@ -7,9 +7,19 @@ export const InputContainer = styled.div`
     display:flex;   
 `
 
+const blink = keyframes`
+    0%{
+        opacity: 1;
+    }70%{
+        opacity: 1;
+    }80%{
+        opacity: 0;
+    }
+`
 
 export const InputCursor = styled.div<{
-    focused:boolean;
+    focused:boolean,
+    mobile:boolean,
 }>`
     position: relative;
     right:2.5ch;
@@ -21,17 +31,23 @@ export const InputCursor = styled.div<{
     z-index: -1;
     opacity: 0;
 
+
     ${({ focused }) => focused && css`
         opacity: 1;
+        animation: ${blink} 1s infinite;
+    `}
+
+    ${({mobile}) => mobile && css`
+        display:none;
     `}
 `
 
 
-export const InputTextField = styled.input.attrs((props:{symbolCount:number}) => ({
+export const InputTextField = styled.input.attrs((props:{symbolCount:number,mobile:boolean}) => ({
     style:{
-        width:`calc(${props.symbolCount} * 1ch + 5ch)`
+        width: props.mobile === false ? `calc(${props.symbolCount} * 1ch + 5ch)` : "100%",
     }
-}))<{symbolCount:number}>`
+}))<{symbolCount:number, mobile:boolean}>`
     caret-color: transparent;
     position: relative;
     left:0px;
@@ -51,7 +67,11 @@ export const InputTextField = styled.input.attrs((props:{symbolCount:number}) =>
     &::selection{
         background-color: transparent;
     }
-
+    
+    ${({ mobile }) => mobile && css`
+        width:100%;
+        caret-color: ${({ theme }) => theme.mainColor || "red"};
+    `}
 `
 
 

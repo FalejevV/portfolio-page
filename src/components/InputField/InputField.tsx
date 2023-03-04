@@ -1,5 +1,6 @@
-import { ChangeEvent, SyntheticEvent, useState } from "react";
+import { ChangeEvent, SyntheticEvent, useEffect, useState } from "react";
 import { InputContainer, InputCursor, InputFieldLabel, InputTextField } from "./InputField.styled";
+import useSmallScreenEffect from "../../hooks/useSmallScreenEffect";
 
 
 
@@ -10,6 +11,16 @@ function InputField(props:{
 
     const [value,setValue] = useState("");
     const [isFocused, setIsFocused] = useState(false);
+    const [smallScreen] = useSmallScreenEffect();
+    const [isPhone, setIsPhone] = useState(false);
+
+    useEffect(() => {
+        if(navigator.userAgent.includes("Android") || navigator.userAgent.includes("iPhone")){
+            setIsPhone(true);
+        }else{
+            setIsPhone(false);
+        }
+    },[]);
 
     function changeValue(e:ChangeEvent){
         let target = e.target as HTMLInputElement;
@@ -23,8 +34,8 @@ function InputField(props:{
     }
     return(
         <InputContainer>
-            <InputTextField onSelect={(e) => selectorPosition(e)} symbolCount={value.length} onBlur={() => setIsFocused(false)} onFocus={(e) => {setIsFocused(true); selectorPosition(e)}} id={props.name} value={value} onChange={(e) => changeValue(e)} type="text" />
-            <InputCursor focused={isFocused}></InputCursor>
+            <InputTextField mobile={smallScreen || isPhone} onSelect={(e) => selectorPosition(e)} symbolCount={value.length} onBlur={() => setIsFocused(false)} onFocus={(e) => {setIsFocused(true); selectorPosition(e)}} id={props.name} value={value} onChange={(e) => changeValue(e)} type="text" />
+            <InputCursor mobile={smallScreen || isPhone} focused={isFocused}></InputCursor>
             <InputFieldLabel htmlFor={props.name}></InputFieldLabel>
         </InputContainer>
     )

@@ -17,17 +17,6 @@ const theme = {
 }
 
 function App(){
-
-    const inputs = document.querySelectorAll('input');
-
-    inputs.forEach(input => {
-        console.log(input);
-        input.setAttribute('autocomplete', 'off')
-        input.setAttribute('autocorrect', 'off')
-        input.setAttribute('autocapitalize', 'off')
-        input.setAttribute('spellcheck', "false")
-    });  
-
     const [page,setPage] = useState("HOME");
 
     return(
