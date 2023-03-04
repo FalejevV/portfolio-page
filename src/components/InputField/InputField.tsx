@@ -23,7 +23,7 @@ function InputField(props:{
     }
     return(
         <InputContainer>
-            <InputTextField onSelect={(e) => selectorPosition(e)} symbolCount={value.length} onBlur={() => setIsFocused(false)} onFocus={(e) => {setIsFocused(true); selectorPosition(e); setValue("")}} id={props.name} value={value} onChange={(e) => changeValue(e)} type="text" />
+            <InputTextField onSelect={(e) => selectorPosition(e)} symbolCount={value.length} onBlur={() => setIsFocused(false)} onFocus={(e) => {setIsFocused(true); selectorPosition(e)}} id={props.name} value={value} onChange={(e) => changeValue(e)} type="text" />
             <InputCursor focused={isFocused}></InputCursor>
             <InputFieldLabel htmlFor={props.name}></InputFieldLabel>
         </InputContainer>
