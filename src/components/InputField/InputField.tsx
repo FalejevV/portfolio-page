@@ -29,6 +29,9 @@ function InputField(props:{
     }
 
     function selectorPosition(e:SyntheticEvent<HTMLInputElement, Event>){
+        if(isPhone || smallScreen){
+            return;
+        }
         let target = e.target as HTMLInputElement;
         target.setSelectionRange(-1,-1);
     }
