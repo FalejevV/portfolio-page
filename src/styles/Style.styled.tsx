@@ -1,4 +1,98 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
+
+export const MonitorFrame = styled.img`
+    width:1750px;
+    height:1110px;
+    position: absolute;
+    left:50%;
+    top:0px;
+    transform: translateX(-50%);
+    opacity: 0.2;
+    filter:blur(5px);
+    @media(max-width:1550px){
+        display:none;
+    }
+`
+
+const someFlickerStuff = keyframes`
+    0%{
+        opacity: 1;
+    }
+    5%{
+        opacity: 1;
+    }
+    5.01%{
+        opacity: 0.7;
+    }
+    5.05%{
+        opacity: 1;
+    }
+    20%{
+        opacity: 1;
+    }
+    20.01%{
+        opacity: 0.3;
+    }
+    20.05%{
+        opacity: 1;
+    }
+    30%{
+        opacity: 1;
+    }
+    31.1%{
+        opacity: 0.9;
+    }
+    31.5%{
+        opacity: 1;
+    }
+    32.5%{
+        opacity: 1;
+    }
+    33.1%{
+        opacity: 0.7;
+    }
+    33.5%{
+        opacity: 1;
+    }
+    44%{
+        opacity: 1;
+    }
+    40.01%{
+        opacity: 0.9;
+    }
+    40.05%{
+        opacity: 1;
+    }
+    55%{
+        opacity: 1;
+    }
+    55.01%{
+        opacity: 0.7;
+    }
+    55.05%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    70.01%{
+        opacity: 0.7;
+    }
+    70.05%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    90.01%{
+        opacity: 0.7;
+    }
+    90.05%{
+        opacity: 1;
+    }
+
+
+`
 
 export const MainContainer = styled.div`
     height: ${({ theme }) => theme.maxHeight || "1000px"};
@@ -6,15 +100,23 @@ export const MainContainer = styled.div`
     max-height: ${({ theme }) => theme.maxHeight || "1000px"};
     position: relative;
     margin: 0 auto;
-    overflow-x:hidden;
+    overflow:hidden;
     display: flex;
     flex-direction: column;
     padding:0px 30px;
 
+    animation: ${someFlickerStuff} 60s linear infinite;
+    margin-top:45px;
+
+    @media(max-width:1550px){
+        margin-top:0px;
+    }
 
     @media(max-width:500px){
         padding:10px;
     }
+
+
 `
 
 export const PContainer = styled.div<{

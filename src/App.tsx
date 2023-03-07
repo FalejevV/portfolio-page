@@ -1,13 +1,16 @@
 import { useState } from "react";
 import { GlobalStyle } from "./styles/GlobalStyle.styled";
 import { ThemeProvider } from "styled-components";
-import { MainContainer } from "./styles/Style.styled";
+import { MainContainer, MonitorFrame } from "./styles/Style.styled";
 import OverlayGreenRadialGradient from "./components/OverlayGreenRadialGradient/OGRG";
 import BottomUI from "./layout/BottomUI";
 import TopStatsBar from "./layout/TopStatsBar";
 import WorkPage from "./layout/WorkPage/WorkPage";
 import HomePage from "./layout/HomePage/HomePage";
 import ContactPage from "./layout/ContactPage/ContactPage";
+import LinesOverlayEffect from "./components/LinesOverlayEffect/LinesOverlayEffect";
+import FadeOverlayEffect from "./components/FadeOverlayEffect/FadeOverlayEffect";
+import assImage from "./img/ass.png";
 
 const theme = {
     maxWidth:"1440px",
@@ -22,7 +25,10 @@ function App(){
     return(
         <ThemeProvider theme={theme}>
             <GlobalStyle />
+            <MonitorFrame src={assImage} />
             <MainContainer>
+                <LinesOverlayEffect />
+                <FadeOverlayEffect />
                 <OverlayGreenRadialGradient />
                 <TopStatsBar />
 
