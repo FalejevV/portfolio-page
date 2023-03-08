@@ -9,7 +9,7 @@ function SkillItem(props:{
 
     return(
         <SkillItemContainer opacity={props.opacity}>
-            <SkillImage src={props.icon} />
+            <SkillImage alt="Skill image" src={props.icon} />
             <SkillName>{props.skillName}</SkillName>
         </SkillItemContainer>
     )
