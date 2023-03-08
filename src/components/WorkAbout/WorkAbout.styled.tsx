@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { PText } from "../../styles/Style.styled";
-import pointerCursor from "../../img/PointerCursor.png";
 
 export const WorkAboutContainer = styled.div`
     width:100%;
@@ -9,7 +8,6 @@ export const WorkAboutContainer = styled.div`
     display:flex;
     flex-direction: column;
     gap:25px;
-    position:relative;
 
     @media(max-width:940px){
         height: 540px;
@@ -75,6 +73,13 @@ export const WorkAboutImages = styled.div`
 export const WorkAboutImage = styled.img`
     height:100%;
     object-fit: cover;
+
+    filter: sepia(100%) hue-rotate(100deg) saturate(900%) brightness(0.5);
+
+    transition: all 0.3s;
+    &:hover{
+        filter: unset;
+    }
 `
 
 export const LinkContainer = styled.div`
@@ -85,6 +90,31 @@ export const LinkContainer = styled.div`
     @media(max-width:1200px){
         gap:0px;
     }
+`
+
+export const ZoomedImageContainer = styled.div`
+    position: absolute;
+    top:-100px;
+    left:50%;
+    transform: translateX(-50%);
+    width:100%;
+    height: ${({ theme }) => theme.maxHeight || "1000px"};
+    max-width: ${({ theme }) => theme.maxWidth || "1000px"};
+    max-height: ${({ theme }) => theme.maxHeight || "1000px"};
+    z-index:9999;
+    background-color: #0000009d;
+`
+
+export const ZoomedImage = styled.img`
+    position: absolute;
+    top:10%;
+    left:50%;
+    transform: translateX(-50%);
+    width:100%;
+    max-width: 1000px;
+    height:100%;
+    max-height: 700px;
+    object-fit: contain;
 `
 
 

@@ -9,9 +9,9 @@ function WorkRow(props:{
 }){
     
     return(
-        <WorkRowContainer onClick={() => props.onClick()}>
+        <WorkRowContainer>
             <WorkRowIndicator toggle={props.toggle}></WorkRowIndicator>
-            <WorkRowTitle textAlign="left">{props.name}</WorkRowTitle>
+            <WorkRowTitle onClick={() => props.onClick()} textAlign="left">{props.name}</WorkRowTitle>
         </WorkRowContainer>
     )
 }

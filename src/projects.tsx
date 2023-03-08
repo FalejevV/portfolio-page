@@ -1,11 +1,14 @@
 const projects:IProject[]= [
     {
         name:"IAEround - Bike Routes Storage",
-        about:"I was riding a bike with a friend, discussing what kind of project I should create for practice. He came up with the idea - to create a site with a repository of routes. So here we are... A lot of unfamiliar things hit me at once. CORS / HTTP cookie / Password encryption / Working with files in google storage. In the end it is perfect, well polished project (no)",
+        about:"While cycling, a friend suggested creating a website where you can save your cycling routes. Used Google Bucked to store images. AWS PostgreSQL - database. Backend - ExpressJS. CORS problems, httpCookies, JWT (Too much for a first project...) In general, it works. I still find bugs. BUT IT WORKS. At least at the moment when I write this text.",
         images:[
-            "/img/projects/1.jpg",
-            "/img/projects/2.jpg",
-            "/img/projects/3.jpg"
+            "/img/projects/iae1.png",
+            "/img/projects/iae6.png",
+            "/img/projects/iae2.png",
+            "/img/projects/iae3.png",
+            "/img/projects/iae4.png",
+            "/img/projects/iae5.png",
         ],
         liveLink:"https://iaeround.xyz/",
         sourceLink:"https://github.com/FalejevV/iaeround-frontend",
@@ -13,26 +16,27 @@ const projects:IProject[]= [
     },
     {
         name:"<DIV> Game </DIV>",
-        about:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis mi ut tellus ullamcorper condimentum. Nam ac metus urna. Proin molestie nibh metus. Proin a urna a ipsum vulputate finibus.",
+        about:"After the first project (which is higher in the list) I decided to relax a little and make a simple clicker where you need to save the world and center the damn <DIV> tag. There is nothing special about this site. I'll delete it as I make something better.",
         images:[
-            "/img/projects/10.jpg",
-            "/img/projects/5.jpg",
-            "/img/projects/6.jpg"
+            "/img/projects/div1.png",
+            "/img/projects/div2.png",
+            "/img/projects/div3.png",
         ],
-        liveLink:"https://google.com",
-        sourceLink:"https://google.com",
+        liveLink:"https://div-game.vercel.app/",
+        sourceLink:"https://github.com/FalejevV/div-game",
         usedTools:["HTML/CSS/JS", "Styled", "React", "NextJS"],
     },
     {
         name:"Frontend-Mentor",
-        about:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis mi ut tellus ullamcorper condimentum. Nam ac metus urna. Proin molestie nibh metus. Proin a urna a ipsum vulputate finibus.",
+        about:"I decided to insert here the first practical classes that I took on the FrontendMentor website. I throw a link to the page of completed tasks where you can see them live. As well as the main github page of all these projects.",
         images:[
-            "/img/projects/7.jpg",
-            "/img/projects/8.jpg",
-            "/img/projects/9.jpg"
+            "/img/projects/fmentor1.png",
+            "/img/projects/fmentor2.jpg",
+            "/img/projects/fmentor3.jpg",
+            "/img/projects/fmentor4.jpg",
         ],
-        liveLink:"https://google.com",
-        sourceLink:"https://google.com",
+        liveLink:"https://www.frontendmentor.io/profile/FalejevV",
+        sourceLink:"https://github.com/FalejevV/main",
         usedTools:["HTML/CSS/JS", "Styled", "React", "*maybe* API"],
     },
 ]

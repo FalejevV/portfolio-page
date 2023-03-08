@@ -1,17 +1,25 @@
 import { nanoid } from "nanoid";
 import { IProject } from "../../projects";
 
-import { LinkContainer, WorkAboutContainer, WorkAboutImage, WorkAboutImageContainer, WorkAboutImages, WorkAboutText, WorkAboutTitle, WorkAboutTitleContainer } from "./WorkAbout.styled";
+import { LinkContainer, WorkAboutContainer, WorkAboutImage, WorkAboutImageContainer, WorkAboutImages, WorkAboutText, WorkAboutTitle, WorkAboutTitleContainer, ZoomedImage, ZoomedImageContainer } from "./WorkAbout.styled";
 import { Link } from "../../styles/Style.styled";
+import { useState } from "react";
 
 
 
 function WorkAbout(props:{
     data:IProject
 }){
+    const [zoomedImage,setZoomedImage] = useState("");
     
     return(
         <WorkAboutContainer>
+            {zoomedImage.trim() !== "" &&
+            <ZoomedImageContainer onClick={() => setZoomedImage("")}>
+                <ZoomedImage src={zoomedImage} />
+            </ZoomedImageContainer>
+            }
+            
             <WorkAboutTitleContainer>
                 <WorkAboutTitle textAlign="left">{props.data.name}</WorkAboutTitle>
 
@@ -25,7 +33,7 @@ function WorkAbout(props:{
             
                 <WorkAboutImageContainer>
                     <WorkAboutImages>
-                        {props.data.images.map((image:string,index:number) => <WorkAboutImage key={nanoid()} alt="Project image" src={image} />)}
+                        {props.data.images.map((image:string,index:number) => <WorkAboutImage onClick={() => setZoomedImage(image)} key={nanoid()} alt="Project image" src={image} />)}
                     </WorkAboutImages>
                 </WorkAboutImageContainer>
         </WorkAboutContainer>
