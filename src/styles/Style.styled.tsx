@@ -1,17 +1,19 @@
 import styled, { css, keyframes } from "styled-components";
+import defaultCursor from "../img/CursorDefault.png";
 
 export const MonitorFrame = styled.img`
-    width:1750px;
-    height:1110px;
+    width:1760px;
+    height:1115px;
     position: absolute;
     left:50%;
     top:0px;
     transform: translateX(-50%);
     opacity: 0.2;
-    filter:blur(5px);
     @media(max-width:1550px){
         display:none;
     }
+    z-index: 100000;
+    pointer-events: none;
 `
 
 const someFlickerStuff = keyframes`
@@ -95,6 +97,7 @@ const someFlickerStuff = keyframes`
 `
 
 export const MainContainer = styled.div`
+    cursor:url(${defaultCursor}), default;
     height: ${({ theme }) => theme.maxHeight || "1000px"};
     max-width: ${({ theme }) => theme.maxWidth || "1000px"};
     max-height: ${({ theme }) => theme.maxHeight || "1000px"};
@@ -104,9 +107,11 @@ export const MainContainer = styled.div`
     display: flex;
     flex-direction: column;
     padding:0px 30px;
-
     animation: ${someFlickerStuff} 60s linear infinite;
     margin-top:45px;
+    border-radius: 10px;
+
+    filter: drop-shadow(0px -5px 20px #3789465e);
 
     @media(max-width:1550px){
         margin-top:0px;

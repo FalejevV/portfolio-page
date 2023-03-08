@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import pointerCursor from "../../img/PointerCursor.png";
 
 
 export const MenuContainer = styled.div`
@@ -22,6 +23,7 @@ export const MenuContainer = styled.div`
 
 export const ButtonText = styled.p`
     transition: all 0.4s;
+    cursor: url(${pointerCursor}) , pointer;
 `
 
 
@@ -38,7 +40,7 @@ export const MenuButton = styled.button<{
     height: 100%;
     font-size: 26px;
     background-color: transparent;
-    cursor: pointer;
+    cursor: url(${pointerCursor}) , pointer;
     transition: all 0.3s;
     position: relative;
     &:after{

@@ -1,4 +1,7 @@
 import { createGlobalStyle } from "styled-components";
+import textCursor from "../img/TextCurspor.png";
+import circleCursor from "../img/CircleCursor.png";
+
 
 export const GlobalStyle = createGlobalStyle`
     html,
@@ -14,6 +17,7 @@ export const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
     background-color: black;
     font-family: 'VT323', monospace;
+    cursor:url(${circleCursor}), none;
     }
 
     
@@ -21,6 +25,10 @@ export const GlobalStyle = createGlobalStyle`
     a {
     color: inherit;
     text-decoration: none;
+    }
+
+    p{
+        cursor:url(${textCursor}), text;
     }
 
     * {
@@ -34,7 +42,12 @@ export const GlobalStyle = createGlobalStyle`
     z-index: 5;
     pointer-events: auto;
     scrollbar-width: thin;
-
     scrollbar-color: #17FF42 transparent;
+
+        &::selection{
+            background-color: #17FF42;
+            color:black;
+        }
     }
+
 `

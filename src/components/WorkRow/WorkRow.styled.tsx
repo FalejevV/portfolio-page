@@ -1,6 +1,8 @@
 import styled, { css } from "styled-components";
 import { PText } from "../../styles/Style.styled";
 
+import pointerCursor from "../../img/PointerCursor.png";
+
 export const WorkRowContainer = styled.div`
     grid-column:1/2 span;
     width:100%;
@@ -37,7 +39,7 @@ export const WorkRowIndicator = styled.div<{
 `
 
 export const WorkRowTitle = styled(PText)`
-    cursor: pointer;
+    cursor: url(${pointerCursor}), pointer;
     position: relative;
     transition: all 0.3s;
     padding:0px 10px;

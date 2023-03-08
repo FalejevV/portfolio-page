@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { PText } from "../../styles/Style.styled";
+import pointerCursor from "../../img/PointerCursor.png";
 
 export const WorkAboutContainer = styled.div`
     width:100%;

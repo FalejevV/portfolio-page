@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { PText } from "../../styles/Style.styled";
+import defaultCursor from "../../img/CursorDefault.png";
 
 export const SkillItemContainer = styled.div<{
     opacity?:string,
 }>`
-
+    cursor:url(${defaultCursor}), default;
     width:100%;
     max-width: 120px;
     aspect-ratio:1/1;
@@ -45,7 +46,7 @@ export const SkillName = styled(PText)`
     color:black;
     font-weight:bold;
     font-size:22px;
-
+    cursor:url(${defaultCursor}), default;
     @media(max-width:600px){
         font-size:18px;
     }
