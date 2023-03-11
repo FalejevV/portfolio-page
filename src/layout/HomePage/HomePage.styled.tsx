@@ -32,6 +32,10 @@ export const UserAboutContainer = styled.div`
     height:200px;
     overflow-x:hidden;
     overflow-y: scroll;
+
+    @media(max-width:500px){
+        height:280px;
+    }
 `
 
 export const AlertSVG = styled.svg`

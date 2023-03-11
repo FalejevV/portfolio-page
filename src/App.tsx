@@ -11,6 +11,7 @@ import ContactPage from "./layout/ContactPage/ContactPage";
 import LinesOverlayEffect from "./components/LinesOverlayEffect/LinesOverlayEffect";
 import FadeOverlayEffect from "./components/FadeOverlayEffect/FadeOverlayEffect";
 import assImage from "./img/ass.png";
+import ToggleOverlayEffect from "./components/ToggleOverlayEffect/ToggleOverlayEffect";
 
 const theme = {
     maxWidth:"1440px",
@@ -21,12 +22,13 @@ const theme = {
 
 function App(){
     const [page,setPage] = useState("HOME");
-
+    const [toggleScreen, setToggleScreen] = useState(false);
     return(
         <ThemeProvider theme={theme}>
             <GlobalStyle />
-            <MonitorFrame src={assImage} />
-            <MainContainer>
+            <MonitorFrame src={assImage}/>
+            <ToggleOverlayEffect toggle={toggleScreen} setToggle={() => setToggleScreen(prev => !prev)} />
+            <MainContainer toggle={toggleScreen}>
                 <LinesOverlayEffect />
                 <FadeOverlayEffect />
                 <OverlayGreenRadialGradient />

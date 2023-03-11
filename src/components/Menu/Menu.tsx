@@ -9,6 +9,7 @@ function Menu(props:{
 
     function switchPage(pageName:string){
         if(pageName !== props.page){
+            window.scrollTo(0,0);
             props.setPage(pageName);
         }
     }

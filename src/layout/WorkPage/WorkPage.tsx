@@ -47,7 +47,7 @@ function WorkPage(props:{
                     
                     {isSmallScreen && <MobileContainer>
                         {projects.map((project:IProject) => 
-                        <WPProjectReviewContainer>
+                        <WPProjectReviewContainer key={nanoid()}>
                             <WPProjectReviewMainContainer>
                                 <WorkAbout data={project} />
                             </WPProjectReviewMainContainer>

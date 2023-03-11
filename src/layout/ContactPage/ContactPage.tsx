@@ -41,6 +41,7 @@ function ContactPage(props:{
                 
             }else{
                 setMailStatus("Some fields are empty!");
+                setButtonDisabled(false);
             }
         }
     }
@@ -49,7 +50,7 @@ function ContactPage(props:{
         if(mailStatus.trim() !== ""){
             setTimeout(() => {
                 setMailStatus("");
-            },3000);
+            },2000);
         }
     },[mailStatus]);
 

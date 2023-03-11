@@ -73,4 +73,8 @@ export const MobileContainer = styled(WorkPageContainer)`
     ${WPProjectReviewContainer}{
         border:3px solid ${({ theme }) => theme.dimmColor || "red"};
     }
+
+    @media(max-width:500px){
+        max-height: 770px;
+    }
 `

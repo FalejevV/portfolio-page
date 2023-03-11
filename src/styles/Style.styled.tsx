@@ -2,10 +2,10 @@ import styled, { css, keyframes } from "styled-components";
 import defaultCursor from "../img/CursorDefault.png";
 
 export const MonitorFrame = styled.img`
-    width:1760px;
-    height:1115px;
+    width:1775px;
+    height:1120px;
     position: absolute;
-    left:50%;
+    left:calc(50% - 3px);
     top:0px;
     transform: translateX(-50%);
     opacity: 0.2;
@@ -96,7 +96,9 @@ const someFlickerStuff = keyframes`
 
 `
 
-export const MainContainer = styled.div`
+export const MainContainer = styled.div<{
+    toggle:boolean,
+}>`
     cursor:url(${defaultCursor}), default;
     height: ${({ theme }) => theme.maxHeight || "1000px"};
     max-width: ${({ theme }) => theme.maxWidth || "1000px"};
@@ -104,7 +106,7 @@ export const MainContainer = styled.div`
     position: relative;
     margin: 0 auto;
     overflow:hidden;
-    display: flex;
+    display: none;
     flex-direction: column;
     padding:0px 30px;
     animation: ${someFlickerStuff} 60s linear infinite;
@@ -122,6 +124,13 @@ export const MainContainer = styled.div`
     }
 
 
+    ${({ toggle }) => toggle && css`
+        display:flex;
+    `}
+
+    @media(max-width:1550px){
+        display: flex;
+    }
 `
 
 export const PContainer = styled.div<{
@@ -132,12 +141,14 @@ export const PContainer = styled.div<{
     display: none;
     pointer-events:none;
     user-select:none;
+
     ${({ toggle }) => toggle && css`
         display: flex;
         opacity:1;
         pointer-events:unset;
         user-select:unset;
     `}
+
     position:relative;
     flex:1 auto;
     
@@ -145,6 +156,7 @@ export const PContainer = styled.div<{
     align-items: center;
     font-size: 40px;
     padding:50px 0px;
+    
     @media(max-width:880px){
         padding-bottom: 20px;
     }
