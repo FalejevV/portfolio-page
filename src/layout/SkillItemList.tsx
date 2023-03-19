@@ -25,7 +25,7 @@ const SkillItemsContainer = styled.div`
 function SkillItemList(){
     return(
         <SkillItemsContainer>
-            <SkillItem opacity="0.8" icon={teaIcon} skillName={"Tea"}  />
+            <SkillItem opacity="0.95" icon={teaIcon} skillName={"Tea"}  />
             <SkillItem icon={cssIcon} skillName={"CSS"}  />
             <SkillItem icon={htmlIcon} skillName={"HTML"}  />
             <SkillItem icon={jsIcon} skillName={"JS"}  />

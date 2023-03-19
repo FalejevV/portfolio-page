@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
     background-color: black;
     font-family: 'VT323', monospace;
-    cursor:url(${circleCursor}), none;
+    cursor:url(${circleCursor}) 8 8, pointer;
     }
 
     

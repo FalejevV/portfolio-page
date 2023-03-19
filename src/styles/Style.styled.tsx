@@ -109,12 +109,14 @@ export const MainContainer = styled.div<{
     display: none;
     flex-direction: column;
     padding:0px 30px;
-    animation: ${someFlickerStuff} 60s linear infinite;
+    
     margin-top:45px;
     border-radius: 10px;
 
     filter: drop-shadow(0px -5px 20px #3789465e);
-
+    @media(min-width:1280px){
+        animation: ${someFlickerStuff} 60s linear infinite;
+    }
     @media(max-width:1550px){
         margin-top:0px;
     }

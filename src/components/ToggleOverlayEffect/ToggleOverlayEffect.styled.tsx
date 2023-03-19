@@ -26,7 +26,7 @@ const toggleAnim = keyframes`
 export const TOEContainer = styled.div<{
     toggle:boolean,
 }>`
-    width: ${({ theme }) => theme.maxWidth};
+    width: ${({ theme }) => `calc(${theme.maxWidth} + 5px)`};
     height: ${({ theme }) => theme.maxHeight};
     background-color: black;
     left:50%;

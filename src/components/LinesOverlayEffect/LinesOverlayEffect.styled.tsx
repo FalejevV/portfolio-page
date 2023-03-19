@@ -19,4 +19,9 @@ export const LOEContainer = styled.div`
     animation: ${fallAnimation} 50s infinite linear;
     pointer-events: none;
     z-index: 1000;
+
+
+    @media(max-width:1280px){
+        display:none;
+    }
 `
