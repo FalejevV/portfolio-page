@@ -24,8 +24,8 @@ function WorkAbout(props:{
                 <WorkAboutTitle textAlign="left">{props.data.name}</WorkAboutTitle>
 
                 <LinkContainer>
-                    <Link target="_blank" href={props.data.liveLink}>LIVE</Link>
-                    <Link target="_blank" href={props.data.sourceLink}>SOURCE</Link>
+                    {props.data.liveLink.trim() !== "" && <Link target="_blank" href={props.data.liveLink}>LIVE</Link>}
+                    {props.data.sourceLink.trim() !== "" && <Link target="_blank" href={props.data.sourceLink}>SOURCE</Link>}
                 </LinkContainer>
             </WorkAboutTitleContainer>
             

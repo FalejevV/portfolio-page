@@ -29,6 +29,19 @@ const projects:IProject[]= [
         usedTools:["HTML/CSS/JS", "Styled", "React", "NextJS"],
     },
     {
+        name:"Mobile routes database",
+        about:"Uncle asked me to make a simple application - database for an android tablet where he can store information about various companies associated with his work. The experience with React native / expo was not as interesting as I thought, rather problematic. The database is stored in a text file in json format. I tried to make the app as responsive as possible.",
+        images:[
+            "/img/projects/DB1.png",
+            "/img/projects/DB2.png",
+            "/img/projects/DB3.png",
+            "/img/projects/DB4.png",
+        ],
+        liveLink:"",
+        sourceLink:"https://github.com/FalejevV/BD-DG",
+        usedTools:["React native/EXPO", "Styled-native"],
+    },
+    {
         name:"Frontend-Mentor",
         about:"I decided to insert here the first practical classes that I took on the FrontendMentor website. I throw a link to the page of completed tasks where you can see them live. As well as the main github page of all these projects.",
         images:[
