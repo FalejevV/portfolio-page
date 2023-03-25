@@ -1,6 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 import textCursor from "../img/TextCurspor.png";
-import circleCursor from "../img/CircleCursor.png";
 
 
 export const GlobalStyle = createGlobalStyle`
@@ -17,7 +16,6 @@ export const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
     background-color: black;
     font-family: 'VT323', monospace;
-    cursor:url(${circleCursor}) 16 16, pointer;
     }
 
     

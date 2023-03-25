@@ -9,6 +9,7 @@ export const MonitorFrame = styled.img`
     top:0px;
     transform: translateX(-50%);
     opacity: 0.2;
+    user-select: none;
     @media(max-width:1550px){
         display:none;
     }
