@@ -1,7 +1,7 @@
 const projects:IProject[]= [
     {
         name:"IAEround - Bike Routes Storage",
-        about:"While cycling, a friend suggested creating a website where you can save your cycling routes. Used Google Bucked to store images. AWS PostgreSQL - database. Backend - ExpressJS. CORS problems, httpCookies, JWT (Too much for a first project...) In general, it works. I still find bugs. BUT IT WORKS. At least at the moment when I write this text.",
+        about:"While cycling, a friend suggested creating a website where you can save your cycling routes. Used Google Bucked to store images. AWS PostgreSQL - database. Backend - ExpressJS. CORS problems, httpCookies, JWT (Too much for a first project...) In general, it works. I still find bugs. BUT IT WORKS. At least at the moment when I write this text. TEST USER LOGIN ANS PASSWORD - test,test",
         images:[
             "/img/projects/iae0.jpg",
             "/img/projects/iae1.jpg",
