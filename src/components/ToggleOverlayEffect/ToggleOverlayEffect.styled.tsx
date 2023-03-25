@@ -44,26 +44,36 @@ export const TOEContainer = styled.div<{
     }
 `
 
-export const TOEButton = styled.button<{
+export const TOEButtonContainer = styled.div<{
     toggle:boolean,
 }>`
-    position: absolute;
-    right:calc(50% - 774px);
-    top:1070px;
-    width:18px;
-    height:40px;
-    background: ${({ theme }) => theme.mainColor};
-    box-shadow: 0px 0px 10px 2px ${({ theme }) => theme.mainColor};
-    z-index: 999999;
     cursor: pointer;
-
+    position: absolute;
+    width:40px;
+    height:40px;
+    left:${({ theme }) => `calc(50% + (${theme.maxWidth} / 2) + 25px)` || "1000px"};
+    top: ${({ theme }) => `calc(${theme.maxHeight} + 50px)` || "1000px"};
+    border-radius:5px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
     ${({ toggle }) => toggle && css`
-        background: ${({ theme }) => theme.dimmColor};
-        box-shadow: 0px 0px 10px 2px ${({ theme }) => theme.dimmColor};
-        transform: scale(0.9);
+        opacity: 0.5;
+        transform: scale(0.96);
     `}
+`
 
-    @media(max-width:1550px){
-        display: none;
-    }
+export const TOESVG = styled.svg`
+    width:30px;
+    height:30px;
+    fill:${({ theme }) => theme.mainColor};
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    filter:blur(1px);
+`
+
+export const TOEBackgroundSVG = styled(TOESVG)`
+    filter:blur(5px) brightness(2);
 `
