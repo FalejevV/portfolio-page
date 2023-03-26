@@ -61,6 +61,10 @@ export const TOEButtonContainer = styled.div<{
         opacity: 0.5;
         transform: scale(0.96);
     `}
+
+    @media(max-width:1550px){
+        display: none;
+    }
 `
 
 export const TOESVG = styled.svg`
