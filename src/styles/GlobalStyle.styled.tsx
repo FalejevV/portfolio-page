@@ -6,6 +6,10 @@ export const GlobalStyle = createGlobalStyle`
     html,
     body {
     scrollbar-width: none;
+    ::-webkit-scrollbar {
+        width: 0px;
+    }
+
     padding: 0;
     margin: 0;
     font-family: DM Sans, sans-serif;
@@ -39,13 +43,36 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'VT323', monospace;
     z-index: 5;
     pointer-events: auto;
-    scrollbar-width: thin;
-    scrollbar-color: #17FF42 transparent;
-
         &::selection{
             background-color: #17FF42;
             color:black;
         }
     }
 
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: #00ff1e #ffffff0;
+    }
+
+    /* Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+        width: 8px;
+        height:8px;
+    }
+
+    *::-webkit-scrollbar-track {
+        background: #ffffff0;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #00ff1ea2;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: #00ff1e;
+        border-radius: 0px;
+        border: 0px none #ffffff0;
+    }
+
 `
+
