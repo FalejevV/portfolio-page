@@ -1,7 +1,7 @@
 const projects:IProject[]= [
     {
         name:"IAEround - Bike Routes Storage",
-        about:"While cycling, a friend suggested creating a website where you can save your cycling routes. Used Google Bucked to store images. AWS PostgreSQL - database. Backend - ExpressJS. CORS problems, httpCookies, JWT (Too much for a first project...) In general, it works. I still find bugs. BUT IT WORKS. At least at the moment when I write this text. TEST USER LOGIN ANS PASSWORD - test,test",
+        about:"This site is a kind of database that stores cycling routes. ExpressJS manages the AWS Postgres database and Google Bucket file storage. NextJs is responsible for Frontend. Creating this website, I learned about different things: JWT, CORS, httpCookie, SSR, etc...",
         images:[
             "/img/projects/iae0.jpg",
             "/img/projects/iae1.jpg",
@@ -17,7 +17,7 @@ const projects:IProject[]= [
     },
     {
         name:"<DIV> Game </DIV>",
-        about:"After the first project (which is higher in the list) I decided to relax a little and make a simple clicker where you need to save the world and center the damn <DIV> tag. There is nothing special about this site. I'll delete it as I make something better.",
+        about:`The site is a joke clicker game in which you have to "Save the world by centering the DIV". I can't tell you more about the site. Dumb and funny.`,
         images:[
             "/img/projects/divgame1.jpg",
             "/img/projects/divgame2.jpg",
@@ -30,7 +30,7 @@ const projects:IProject[]= [
     },
     {
         name:"Mobile routes database",
-        about:"Uncle asked me to make a simple application - database for an android tablet where he can store information about various companies associated with his work. The experience with React native / expo was not as interesting as I thought, rather problematic. The database is stored in a text file in json format. I tried to make the app as responsive as possible.",
+        about:"Experimenting with React Native / Expo. A notebook that stores information about different companies. In addition to modifying, adding, and deleting information, there is a search, sorting by country, as well as importing and exporting the database using the device storage. In this case, the database is a text file that stores records in JSON format.",
         images:[
             "/img/projects/DB1.png",
             "/img/projects/DB2.png",
@@ -43,7 +43,7 @@ const projects:IProject[]= [
     },
     {
         name:"Frontend-Mentor",
-        about:"I decided to insert here the first practical classes that I took on the FrontendMentor website. I throw a link to the page of completed tasks where you can see them live. As well as the main github page of all these projects.",
+        about:"My exercises from the FrontendMentor website",
         images:[
             "/img/projects/fmentor1.png",
             "/img/projects/fmentor2.jpg",

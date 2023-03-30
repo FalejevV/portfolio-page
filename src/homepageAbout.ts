@@ -1,9 +1,12 @@
 const about = {
-    role:`Jr. Frontend Developer`,
+    role:`Frontend Developer`,
     phrase: `Cool opening phrase not found`,
-    about: `I'm bad at describing myself but I'll try... I like to create things. I was interested in different areas of programming: augmented reality, computer vision, creating video games and many other things that my hands have not yet reached :/ Started to get involved in web development around 2021-2022, learning everything on my own, watching different videos and drowning in hundreds of Google pages.
-         Responsible? - I think yes.
-    Experience working in a team? - nope.`
+    about: `
+    I love to create stuff, sitting at the computer.
+     After graduating from college, experimented with different areas of programming and eventually settled on creating websites (around 2022).
+      Since then, i try to learn and practice every day creating different projects.
+       The time i spend at the computer i mix with walking, cycling, and other new things that my hands have reached.
+    `
 }
 
 export default about;
