@@ -3,15 +3,11 @@ import { PText } from "../../styles/Style.styled";
 
 export const WorkAboutContainer = styled.div`
     width:100%;
-    height:100%;
+    height:fit-content;
     padding:25px;
     display:flex;
     flex-direction: column;
     gap:25px;
-
-    @media(max-width:940px){
-        height: 540px;
-    }
 `
 
 export const WorkAboutTitle = styled(PText)`
@@ -44,6 +40,10 @@ export const WorkAboutText = styled(PText)`
         opacity: 1;
     }
 
+    @media(max-width:940px){
+        flex:unset;
+    }
+
     @media(max-width:650px){
         font-size:20px;
     }
@@ -53,6 +53,7 @@ export const WorkAboutImageContainer = styled.div`
     height:100%;
     width:100%;
     max-height: 200px;
+    min-height: 150px;
     overflow: scroll;
     position:relative;
 
@@ -74,7 +75,6 @@ export const WorkAboutImage = styled.img`
     height:100%;
     object-fit: cover;
 
-    filter: sepia(100%) hue-rotate(100deg) saturate(900%) brightness(0.5);
 
     transition: all 0.3s;
     &:hover{

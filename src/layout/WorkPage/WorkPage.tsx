@@ -54,7 +54,7 @@ function WorkPage(props:{
                             
                             <UIBorderStat leftTitleLineWidth="20%" title={"USED TOOLS"} noBottom noLeft noRight element={
                                 <TagsContainer>
-                                    {projects[currentProject].usedTools.map((tool:string) => <Tag key={nanoid()} title={tool} />)}
+                                    {project.usedTools.map((tool:string) => <Tag key={nanoid()} title={tool} />)}
                                 </TagsContainer>
                             }/>
                         </WPProjectReviewContainer>)}

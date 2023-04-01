@@ -38,6 +38,10 @@ export const WPProjectReviewContainer = styled.div`
     margin-top:-2px;
     max-height: 695px;
     border-left:0px;
+
+    @media(max-width:940px){
+        height:fit-content;
+    }
 `
 
 export const WPProjectReviewMainContainer = styled.div`
@@ -46,6 +50,11 @@ export const WPProjectReviewMainContainer = styled.div`
     width:100%;
     overflow-x:hidden;
     overflow-y:scroll;
+
+    @media(max-width:940px){
+        height:fit-content;
+        max-height: unset;
+    }
 `
 
 export const TagsContainer = styled.div`
