@@ -8,6 +8,7 @@ import WorkAbout from "../../components/WorkAbout/WorkAbout";
 import Tag from "../../components/Tag/Tag";
 import { nanoid } from "nanoid";
 import useSmallScreenEffect from "../../hooks/useSmallScreenEffect";
+import { ZoomedImage, ZoomedImageContainer } from "../../components/WorkAbout/WorkAbout.styled";
 
 
 function WorkPage(props:{
@@ -16,10 +17,16 @@ function WorkPage(props:{
 
     const [currentProject,setCurrentProject] = useState(0);
     const [isSmallScreen] = useSmallScreenEffect();
-    
+    const [zoomedImage,setZoomedImage] = useState("");
 
     return(
         <PContainer toggle={props.toggle}>
+            {zoomedImage.trim() !== "" &&
+            <ZoomedImageContainer onClick={() => setZoomedImage("")}>
+                <ZoomedImage src={zoomedImage} />
+            </ZoomedImageContainer>
+            }
+            
             <WorkPageContainer>
                     {!isSmallScreen && <>
                         <UIBorderStat leftTitleLineWidth="11%" fullCorner title={"USER CREATIONS"} element={
@@ -32,7 +39,7 @@ function WorkPage(props:{
 
                         <WPProjectReviewContainer>
                             <WPProjectReviewMainContainer>
-                                <WorkAbout data={projects[currentProject]} />
+                                <WorkAbout setZoomedImage={setZoomedImage} data={projects[currentProject]} />
                             </WPProjectReviewMainContainer>
 
                             <UIBorderStat leftTitleLineWidth="20%" title={"USED TOOLS"} noBottom noLeft noRight element={
@@ -49,7 +56,7 @@ function WorkPage(props:{
                         {projects.map((project:IProject) => 
                         <WPProjectReviewContainer key={nanoid()}>
                             <WPProjectReviewMainContainer>
-                                <WorkAbout data={project} />
+                                <WorkAbout setZoomedImage={setZoomedImage} data={project} />
                             </WPProjectReviewMainContainer>
                             
                             <UIBorderStat leftTitleLineWidth="20%" title={"USED TOOLS"} noBottom noLeft noRight element={

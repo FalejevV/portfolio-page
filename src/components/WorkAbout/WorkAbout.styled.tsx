@@ -3,7 +3,7 @@ import { PText } from "../../styles/Style.styled";
 
 export const WorkAboutContainer = styled.div`
     width:100%;
-    height:fit-content;
+    height:100%;
     padding:25px;
     display:flex;
     flex-direction: column;
@@ -42,6 +42,7 @@ export const WorkAboutText = styled(PText)`
 
     @media(max-width:940px){
         flex:unset;
+        opacity: 1;
     }
 
     @media(max-width:650px){
@@ -53,11 +54,9 @@ export const WorkAboutImageContainer = styled.div`
     height:100%;
     width:100%;
     max-height: 200px;
-    min-height: 150px;
+    min-height: 200px;
     overflow: scroll;
     position:relative;
-
-    
 `
 
 export const WorkAboutImages = styled.div`
@@ -75,6 +74,7 @@ export const WorkAboutImage = styled.img`
     height:100%;
     object-fit: cover;
 
+    filter: sepia(100%) hue-rotate(100deg) saturate(900%) brightness(0.5);
 
     transition: all 0.3s;
     &:hover{

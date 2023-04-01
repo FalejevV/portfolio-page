@@ -51,10 +51,9 @@ export const GlobalStyle = createGlobalStyle`
 
     * {
         scrollbar-width: thin;
-        scrollbar-color: #00ff1e #ffffff0;
+        scrollbar-color: #00ff1e transparent !important;
     }
 
-    /* Chrome, Edge, and Safari */
     *::-webkit-scrollbar {
         width: 8px;
         height:8px;
