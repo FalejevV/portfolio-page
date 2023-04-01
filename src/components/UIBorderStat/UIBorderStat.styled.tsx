@@ -150,6 +150,10 @@ export const UITitleContainer = styled.div`
     position: relative;
     gap:16px;
     top:16.5px;
+
+    @media(max-width:500px){
+        top:14px;
+    }
 `
 
 export const UITitleLine = styled.hr<{
