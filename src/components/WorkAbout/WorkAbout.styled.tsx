@@ -47,6 +47,8 @@ export const WorkAboutText = styled(PText)`
 
     @media(max-width:650px){
         font-size:20px;
+        height:100%;
+        max-height:170px;
     }
 `
 export const WorkAboutImageContainer = styled.div`
@@ -57,6 +59,12 @@ export const WorkAboutImageContainer = styled.div`
     min-height: 200px;
     overflow: scroll;
     position:relative;
+
+
+    @media(max-width:650px){
+        min-height: 160px;
+        max-height: 160px;
+    }
 `
 
 export const WorkAboutImages = styled.div`
