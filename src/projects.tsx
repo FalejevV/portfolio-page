@@ -1,7 +1,7 @@
 const projects:IProject[]= [
     {
         name:"IAEround - Bike Routes Storage",
-        about:"This site is a kind of database that stores cycling routes. ExpressJS manages the AWS Postgres database and Google Bucket file storage. NextJs is responsible for Frontend. Creating this website, I learned about different things: JWT, CORS, httpCookie, SSR, etc...",
+        about:"This site is a kind of database that stores cycling routes. ExpressJS manages the AWS Postgres database and Google Bucket file storage. NextJs is responsible for Frontend. Creating this website, I learned about different things: JWT, CORS, httpCookie, SSR, etc... (login - password : test - test)",
         images:[
             "/img/projects/iae0.jpg",
             "/img/projects/iae1.jpg",
