@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { GlobalStyle } from "./styles/GlobalStyle.styled";
 import { ThemeProvider } from "styled-components";
-import { MainContainer, MonitorFrame } from "./styles/Style.styled";
+import { GlobalContainer, MainContainer, MonitorFrame } from "./styles/Style.styled";
 import OverlayGreenRadialGradient from "./components/OverlayGreenRadialGradient/OGRG";
 import BottomUI from "./layout/BottomUI";
 import TopStatsBar from "./layout/TopStatsBar";
@@ -24,23 +24,25 @@ function App(){
     const [page,setPage] = useState("HOME");
     const [toggleScreen, setToggleScreen] = useState(false);
     return(
-        <ThemeProvider theme={theme}>
-            <GlobalStyle />
-            <MonitorFrame src={assImage}/>
-            <ToggleOverlayEffect toggle={toggleScreen} setToggle={() => setToggleScreen(prev => !prev)} />
-            <MainContainer toggle={toggleScreen}>
-                <LinesOverlayEffect />
-                <FadeOverlayEffect />
-                <OverlayGreenRadialGradient />
-                <TopStatsBar />
+        <GlobalContainer>
+            <ThemeProvider theme={theme}>
+                <GlobalStyle />
+                <MonitorFrame src={assImage}/>
+                <ToggleOverlayEffect toggle={toggleScreen} setToggle={() => setToggleScreen(prev => !prev)} />
+                <MainContainer toggle={toggleScreen}>
+                    <LinesOverlayEffect />
+                    <FadeOverlayEffect />
+                    <OverlayGreenRadialGradient />
+                    <TopStatsBar />
 
-                <HomePage toggle={page === "HOME"} />
-                <WorkPage toggle={page === "WORK"} />
-                <ContactPage toggle={page === "CONTACT"} />
+                    <HomePage toggle={page === "HOME"} />
+                    <WorkPage toggle={page === "WORK"} />
+                    <ContactPage toggle={page === "CONTACT"} />
 
-                <BottomUI setPage={setPage} page={page} />
-            </MainContainer>
-        </ThemeProvider>
+                    <BottomUI setPage={setPage} page={page} />
+                </MainContainer>
+            </ThemeProvider>
+        </GlobalContainer>
     )
 }
 

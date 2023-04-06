@@ -1,6 +1,20 @@
 import styled, { css, keyframes } from "styled-components";
 import defaultCursor from "../img/CursorDefault.png";
 
+export const GlobalContainer = styled.div`
+    position:absolute;
+    top:0px;
+    width:100vw;
+    height:fit-content;
+    min-height: 100vh;
+    transform: scale(0.87) translateY(-100px);
+
+
+    @media(max-width:1550px){
+        transform: unset;
+    }
+`
+
 export const MonitorFrame = styled.img`
     width:1775px;
     height:1120px;
