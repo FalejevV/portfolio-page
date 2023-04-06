@@ -13,6 +13,10 @@ export const GlobalContainer = styled.div`
     @media(max-width:1550px){
         transform: unset;
     }
+
+    @media(min-width:2023px){
+        transform: unset;
+    }
 `
 
 export const MonitorFrame = styled.img`
