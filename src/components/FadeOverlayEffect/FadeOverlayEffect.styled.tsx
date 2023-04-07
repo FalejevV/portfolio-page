@@ -13,4 +13,8 @@ export const FOEContainer = styled.div`
     background: rgb(255,255,255);
     background: radial-gradient(circle, rgba(255,255,255,0) 37%, rgba(0,0,0,1) 100%);
 
+
+    @media(max-width:768px){
+        display:none;
+    }
 `

@@ -88,7 +88,7 @@ export const WorkAboutImage = styled.img`
     height:100%;
     object-fit: cover;
 
-    //filter: sepia(100%) hue-rotate(100deg) saturate(900%) brightness(0.5);
+    filter: sepia(100%) hue-rotate(100deg) saturate(900%) brightness(0.5);
 
     transition: all 0.3s;
     &:hover{
