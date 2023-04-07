@@ -1,14 +1,14 @@
 import UIBorderStat from "../../components/UIBorderStat/UIBorderStat";
 import WorkRow from "../../components/WorkRow/WorkRow";
-import { PContainer, PText } from "../../styles/Style.styled";
-import {  MobileContainer, TagsContainer, WPCreationListGrid, WPProjectReviewContainer, WPProjectReviewMainContainer, WorkPageContainer } from "./WorkPage.styled";
+import { LineDivider, Link, PContainer, PText } from "../../styles/Style.styled";
+import {  MobileContainer, MobileProjectWrap, ProjectDivider, TagsContainer, WPCreationListGrid, WPProjectReviewContainer, WPProjectReviewMainContainer, WorkPageContainer } from "./WorkPage.styled";
 import projects, { IProject } from "../../projects";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import WorkAbout from "../../components/WorkAbout/WorkAbout";
 import Tag from "../../components/Tag/Tag";
 import { nanoid } from "nanoid";
 import useSmallScreenEffect from "../../hooks/useSmallScreenEffect";
-import { ZoomedImage, ZoomedImageContainer } from "../../components/WorkAbout/WorkAbout.styled";
+import { LinkContainer, MobileLinkContainer, ZoomedImage, ZoomedImageContainer } from "../../components/WorkAbout/WorkAbout.styled";
 
 
 function WorkPage(props:{
@@ -18,7 +18,7 @@ function WorkPage(props:{
     const [currentProject,setCurrentProject] = useState(0);
     const [isSmallScreen] = useSmallScreenEffect();
     const [zoomedImage,setZoomedImage] = useState("");
-
+    
     return(
         <PContainer toggle={props.toggle}>
             {zoomedImage.trim() !== "" &&
@@ -39,7 +39,7 @@ function WorkPage(props:{
 
                         <WPProjectReviewContainer>
                             <WPProjectReviewMainContainer>
-                                <WorkAbout setZoomedImage={setZoomedImage} data={projects[currentProject]} />
+                                <WorkAbout setZoomedImage={setZoomedImage} data={projects[currentProject]} isSmallScreen={isSmallScreen}/>
                             </WPProjectReviewMainContainer>
 
                             <UIBorderStat leftTitleLineWidth="20%" title={"USED TOOLS"} noBottom noLeft noRight element={
@@ -52,20 +52,37 @@ function WorkPage(props:{
                     </>
                     }
                     
-                    {isSmallScreen && <MobileContainer>
-                        {projects.map((project:IProject) => 
-                        <WPProjectReviewContainer key={nanoid()}>
-                            <WPProjectReviewMainContainer>
-                                <WorkAbout setZoomedImage={setZoomedImage} data={project} />
-                            </WPProjectReviewMainContainer>
-                            
-                            <UIBorderStat leftTitleLineWidth="20%" title={"USED TOOLS"} noBottom noLeft noRight element={
-                                <TagsContainer>
-                                    {project.usedTools.map((tool:string) => <Tag key={nanoid()} title={tool} />)}
-                                </TagsContainer>
-                            }/>
-                        </WPProjectReviewContainer>)}
-                    </MobileContainer>
+                    {useMemo(() => {
+                        if(isSmallScreen)
+                        return(
+                        <MobileContainer>
+                            {projects.map((project:IProject) => 
+                            <MobileProjectWrap key={nanoid()}>
+                                <WPProjectReviewContainer>
+                                    <WPProjectReviewMainContainer>
+                                        <WorkAbout setZoomedImage={setZoomedImage} data={project} isSmallScreen={isSmallScreen}/>
+                                    </WPProjectReviewMainContainer>
+                                    
+                                    <UIBorderStat leftTitleLineWidth="20%" title={"USED TOOLS"} noBottom noLeft noRight element={
+                                        <TagsContainer>
+                                            {project.usedTools.map((tool:string) => <Tag key={nanoid()} title={tool} />)}
+                                        </TagsContainer>
+                                    }/>
+                                    <MobileLinkContainer>
+                                        {project.liveLink.trim() !== "" && <Link target="_blank" href={project.liveLink}>VIEW LIVE</Link>}
+                                        {project.sourceLink.trim() !== "" && <Link target="_blank" href={project.sourceLink}> VIEW SOURCE</Link>}
+                                    </MobileLinkContainer>
+                                </WPProjectReviewContainer>
+
+                                <ProjectDivider></ProjectDivider>
+                                <ProjectDivider></ProjectDivider>
+                                <ProjectDivider></ProjectDivider>
+
+                            </MobileProjectWrap>
+                        )}
+                        </MobileContainer>
+                        )
+                    },[isSmallScreen])
                     }
 
 

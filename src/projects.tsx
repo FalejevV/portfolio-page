@@ -1,7 +1,8 @@
 const projects:IProject[]= [
     {
         name:"IAEround - Bike Routes Storage",
-        about:"This site is a kind of database that stores cycling routes. ExpressJS manages the AWS Postgres database and Google Bucket file storage. NextJs is responsible for Frontend. Creating this website, I learned about different things: JWT, CORS, httpCookie, SSR, etc... (login - password : test - test)",
+        about:"Web Site where you can post bike routes. Website has: authentication with the ability to change profile info, password and email, the ability to create and change your own routes, search and filter existing routes. Creating this website, I learned about different things: JWT, CORS, httpCookie, SSR... (login - password : test - test)",
+        shortAbout:"Web Site where you can post your bike routes. It has: authentication, route creation with file upload, search and filter...",
         images:[
             "/img/projects/iae0.jpg",
             "/img/projects/iae1.jpg",
@@ -17,7 +18,8 @@ const projects:IProject[]= [
     },
     {
         name:"<DIV> Game </DIV>",
-        about:`The site is a joke clicker game in which you have to "Save the world by centering the DIV". I can't tell you more about the site. Dumb and funny.`,
+        about:`The site is a joke clicker game in which you have to "Save the world by centering the DIV". I can't tell you more about the site. This is a stupid site, so I both want and don't want to show it here`,
+        shortAbout:`This is a joke clicker game. It has: ...nothing special`,
         images:[
             "/img/projects/divgame1.jpg",
             "/img/projects/divgame2.jpg",
@@ -31,6 +33,7 @@ const projects:IProject[]= [
     {
         name:"Mobile routes database",
         about:"Experimenting with React Native / Expo. A notebook that stores information about different companies. In addition to modifying, adding, and deleting information, there is a search, sorting by country, as well as importing and exporting the database using the device storage. In this case, the database is a text file that stores records in JSON format.",
+        shortAbout:`Mobile app used to store compaty information. It has: Entry creation, search, import and export`,
         images:[
             "/img/projects/DB1.png",
             "/img/projects/DB2.png",
@@ -44,6 +47,7 @@ const projects:IProject[]= [
     {
         name:"Frontend-Mentor",
         about:"My exercises from the FrontendMentor website",
+        shortAbout:`My exercises from the FrontendMentor website`,
         images:[
             "/img/projects/fmentor1.png",
             "/img/projects/fmentor2.jpg",
@@ -59,6 +63,7 @@ const projects:IProject[]= [
 export interface IProject{
     name:string,
     about:string,
+    shortAbout:string,
     images:string[],
     liveLink:string,
     sourceLink:string,

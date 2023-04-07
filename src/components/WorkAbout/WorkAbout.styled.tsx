@@ -8,6 +8,12 @@ export const WorkAboutContainer = styled.div`
     display:flex;
     flex-direction: column;
     gap:25px;
+
+    @media(max-width:1000px){
+        padding:20px 15px;
+        padding-bottom:30px;
+        gap:20px;
+    }
 `
 
 export const WorkAboutTitle = styled(PText)`
@@ -99,6 +105,19 @@ export const LinkContainer = styled.div`
         gap:0px;
     }
 `
+
+
+export const MobileLinkContainer = styled(LinkContainer)`
+    padding:10px;
+    display: flex;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    white-space: nowrap;
+    border-top:3px solid ${({ theme }) => theme.dimmColor || "red"};
+`
+
 
 export const ZoomedImageContainer = styled.div`
     position: absolute;

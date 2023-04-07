@@ -25,6 +25,12 @@ export const  UserIntroContainer = styled.div`
     width:100%;
     margin-top:-10px;
     height:30px;
+
+    @media(max-width: 450px){
+        svg{
+            display:none;
+        }
+    }
 `
 
 export const UserAboutContainer = styled.div`

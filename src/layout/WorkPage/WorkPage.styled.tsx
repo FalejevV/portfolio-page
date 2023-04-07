@@ -38,7 +38,6 @@ export const WPProjectReviewContainer = styled.div`
     margin-top:-2px;
     max-height: 695px;
     border-left:0px;
-
     @media(max-width:940px){
         height:fit-content;
     }
@@ -66,6 +65,10 @@ export const TagsContainer = styled.div`
     flex-wrap: wrap;
     overflow-x:hidden;
     overflow-y: scroll;
+
+    @media(max-width:1000px){
+        padding-top:10px;
+    }
 `
 
 
@@ -86,4 +89,18 @@ export const MobileContainer = styled(WorkPageContainer)`
     @media(max-width:500px){
         max-height: 770px;
     }
+`
+
+export const MobileProjectWrap = styled.div`
+    height:fit-content;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+`
+
+export const ProjectDivider = styled.div`
+    width:100%;
+    height:3px;
+    background-color: ${({ theme }) => theme.dimmColor || "red"};
 `

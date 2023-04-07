@@ -21,6 +21,7 @@ export const UIBorderStatContainer = styled.div<{
     ${({ gCol }) => gCol && css`
         grid-column: ${gCol};
     `}
+
 `
 
 
@@ -140,6 +141,7 @@ export const UIStatValueText = styled.div<{
 
     @media(max-width:1000px){
         font-size:20px;
+        padding:25px 15px;
     }
 `
 

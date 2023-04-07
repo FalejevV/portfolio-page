@@ -229,3 +229,11 @@ export const Link = styled.a`
         color:black;
     }
 `
+
+export const LineDivider = styled.div`
+    width:calc(100% + 50px);
+    height:3px;
+    background-color:${({ theme }) => theme.dimmColor || "red"};
+    position:relative;
+    left:-25px;
+`

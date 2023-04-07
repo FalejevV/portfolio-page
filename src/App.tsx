@@ -23,6 +23,7 @@ const theme = {
 function App(){
     const [page,setPage] = useState("HOME");
     const [toggleScreen, setToggleScreen] = useState(false);
+    
     return(
         <GlobalContainer>
             <ThemeProvider theme={theme}>
