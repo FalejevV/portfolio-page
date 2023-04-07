@@ -1,8 +1,8 @@
 const projects:IProject[]= [
     {
         name:"IAEround - Bike Routes Storage",
-        about:"Web Site where you can post bike routes. Website has: authentication with the ability to change profile info, password and email, the ability to create and change your own routes, search and filter existing routes. Creating this website, I learned about different things: JWT, CORS, httpCookie, SSR... (login - password : test - test)",
-        shortAbout:"Web Site where you can post your bike routes. It has: authentication, route creation with file upload, search and filter...",
+        about:"Website where you can post bike routes. It has: authentication with the ability to change profile info, password and email, the ability to create and change your own routes, search and filter existing routes. Creating this website, I learned about different things: JWT, CORS, httpCookie, SSR... (test user: test - test)",
+        shortAbout:"Website where you can post your bike routes. It has: authentication, route creation with file upload, search and filter... (test user: test - test)",
         images:[
             "/img/projects/iae0.jpg",
             "/img/projects/iae1.jpg",
