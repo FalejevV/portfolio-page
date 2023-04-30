@@ -1,10 +1,12 @@
-import { FOEContainer } from "./FadeOverlayEffect.styled";
-
-
+import { FOEImage, FlickerGIF } from "./FadeOverlayEffect.styled";
+import gradiendPng from "../../img/GradiendPNG.png";
+import flickerGif from "../../img/FlickerGif.gif";
 
 function FadeOverlayEffect(){
     return(
-        <FOEContainer></FOEContainer>
+        <>
+            <FOEImage src={gradiendPng}/>
+        </>
     )
 }
 

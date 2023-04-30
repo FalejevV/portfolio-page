@@ -1,20 +1,22 @@
 import styled from "styled-components";
 
-export const FOEContainer = styled.div`
+export const FOEImage = styled.img`
     position: absolute;
-    width:100%;
-    height: 100%;
     left:0px;
     top:0px;
-    pointer-events:none;
+    width:1498px;
+    height:1120px;
+    pointer-events: none;
+    user-select: none;
+`
 
-    z-index: 1000;
-    opacity: 0.5;
-    background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,0) 37%, rgba(0,0,0,1) 100%);
-
-
-    @media(max-width:768px){
-        display:none;
-    }
+export const FlickerGIF = styled.img`
+    position: absolute;
+    left:0px;
+    top:0px;
+    width:1498px;
+    height:1120px;
+    pointer-events: none;
+    user-select: none;
+    z-index: 1000000;
 `

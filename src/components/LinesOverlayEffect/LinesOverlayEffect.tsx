@@ -1,9 +1,9 @@
-import { LOEContainer } from "./LinesOverlayEffect.styled";
-
+import { LOEGif } from "./LinesOverlayEffect.styled";
+import linesGif from "../../img/LinesGif.gif"
 
 function LinesOverlayEffect(){
     return(
-        <LOEContainer></LOEContainer>
+        <LOEGif src={linesGif}/>
     )
 }
 

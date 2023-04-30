@@ -20,7 +20,7 @@ export const GlobalContainer = styled.div`
 `
 
 export const MonitorFrame = styled.img`
-    width:1775px;
+    width:1770px;
     height:1120px;
     position: absolute;
     left:calc(50% - 3px);
@@ -33,86 +33,6 @@ export const MonitorFrame = styled.img`
     }
     z-index: 100000;
     pointer-events: none;
-`
-
-const someFlickerStuff = keyframes`
-    0%{
-        opacity: 1;
-    }
-    5%{
-        opacity: 1;
-    }
-    5.01%{
-        opacity: 0.7;
-    }
-    5.05%{
-        opacity: 1;
-    }
-    20%{
-        opacity: 1;
-    }
-    20.01%{
-        opacity: 0.3;
-    }
-    20.05%{
-        opacity: 1;
-    }
-    30%{
-        opacity: 1;
-    }
-    31.1%{
-        opacity: 0.9;
-    }
-    31.5%{
-        opacity: 1;
-    }
-    32.5%{
-        opacity: 1;
-    }
-    33.1%{
-        opacity: 0.7;
-    }
-    33.5%{
-        opacity: 1;
-    }
-    44%{
-        opacity: 1;
-    }
-    40.01%{
-        opacity: 0.9;
-    }
-    40.05%{
-        opacity: 1;
-    }
-    55%{
-        opacity: 1;
-    }
-    55.01%{
-        opacity: 0.7;
-    }
-    55.05%{
-        opacity: 1;
-    }
-    70%{
-        opacity: 1;
-    }
-    70.01%{
-        opacity: 0.7;
-    }
-    70.05%{
-        opacity: 1;
-    }
-    90%{
-        opacity: 1;
-    }
-    90.01%{
-        opacity: 0.7;
-    }
-    90.05%{
-        opacity: 1;
-    }
-
-
 `
 
 export const MainContainer = styled.div<{
@@ -133,9 +53,6 @@ export const MainContainer = styled.div<{
     border-radius: 10px;
 
     filter: drop-shadow(0px -5px 20px #3789465e);
-    @media(min-width:1280px){
-        animation: ${someFlickerStuff} 60s linear infinite;
-    }
     @media(max-width:1550px){
         margin-top:0px;
     }
