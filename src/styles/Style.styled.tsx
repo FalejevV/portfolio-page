@@ -156,6 +156,7 @@ export const MainContainer = styled.div<{
 
 export const PContainer = styled.div<{
     toggle:boolean,
+    flexDirection?:string,
 }>`
     width:100%;
     opacity:0;
@@ -172,7 +173,11 @@ export const PContainer = styled.div<{
 
     position:relative;
     flex:1 auto;
-    
+    ${({ flexDirection }) => flexDirection && css`
+        flex-direction: column;
+        margin:0 auto;
+        gap:15px;
+    `}
     justify-content: center;
     align-items: center;
     font-size: 40px;

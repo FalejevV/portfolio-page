@@ -31,7 +31,7 @@ export const UIStatProgressBar = styled.div<{
     position:absolute;
     width:70px;
     height:25px;
-    top:25px;
+    top:27px;
     left:50%;
     transform: translateX(-50%);
     background-color:${({ theme }) => theme.dimmColor || "red"};
@@ -44,6 +44,10 @@ export const UIStatProgressBar = styled.div<{
         width:${({ progress }) => progress || "50%"};
         height:100%;
         background-color:${({ theme }) => theme.mainColor || "green"};
+    }
+
+    @media(max-width:1000px){
+        top:26px;
     }
 `
 

@@ -1,22 +1,11 @@
 import styled, { css, keyframes } from "styled-components";
 import textCursor from "../../img/TextCurspor.png";
 export const InputContainer = styled.div`
-    width:380px;
+    width:100%;
     height:50px;
     position: relative;
     display:flex;
     cursor:url(${textCursor}), text;
-    @media(max-width:520px){
-        width:300px;
-    }
-
-    @media(max-width:420px){
-        width:250px;
-    }
-
-    @media(max-width:350px){
-        width:200px;
-    }
 `
 
 const blink = keyframes`

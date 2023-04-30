@@ -2,8 +2,9 @@ import { FormEvent, useEffect, useState } from "react";
 import InputField from "../../components/InputField/InputField";
 import UIBorderStat from "../../components/UIBorderStat/UIBorderStat";
 import { PContainer } from "../../styles/Style.styled";
-import { ContactContainer, MailStatus, SubmitButton } from "./ContactPage.styled";
+import { ContactContainer, ContactListWrap, MailStatus, SubmitButton } from "./ContactPage.styled";
 import emailjs from '@emailjs/browser';
+import ContactList from "../ContactList/ContactList";
 
 function ContactPage(props:{
     toggle:boolean
@@ -55,7 +56,7 @@ function ContactPage(props:{
     },[mailStatus]);
 
     return(
-        <PContainer toggle={props.toggle}>
+        <PContainer flexDirection="column" toggle={props.toggle}>
             <UIBorderStat leftTitleLineWidth="350%" fullCorner title={"CONTACT FORM"} element={
                 <ContactContainer onSubmit={(e) => submitForm(e)}>
                     <InputField title="Title" name="title"/>
@@ -66,6 +67,9 @@ function ContactPage(props:{
                     {mailStatus.trim() !== "" && <MailStatus>{mailStatus}</MailStatus>}
                 </ContactContainer>
             } />
+            <ContactListWrap>
+                <ContactList />
+            </ContactListWrap>
         </PContainer>
     )
 }

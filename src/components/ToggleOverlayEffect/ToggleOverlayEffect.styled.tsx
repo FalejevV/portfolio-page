@@ -81,3 +81,26 @@ export const TOESVG = styled.svg`
 export const TOEBackgroundSVG = styled(TOESVG)`
     filter:blur(5px) brightness(2);
 `
+
+
+export const flickerArrowAnimation = keyframes`
+  0%,50%,100% {
+    opacity: 0.7;
+  }
+  25%,75% {
+    opacity: 0;
+  }
+  
+`
+
+export const TOEArrowSVG = styled.svg`
+    width:50px;
+    height:50px;
+    fill:green;
+    position: absolute;
+    right:200px;
+    bottom: 200px;
+    transform: rotate(-45deg);
+    opacity:0;
+    animation: ${flickerArrowAnimation} 2s ease-out 5s infinite normal none;
+`

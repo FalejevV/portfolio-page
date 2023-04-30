@@ -2,7 +2,8 @@ import styled from "styled-components";
 import pointerCursor from "../../img/PointerCursor.png";
 
 export const ContactContainer = styled.form`
-    width:100%;
+    width:calc(100vw - 55px);
+    max-width:400px;
     height:100%;
     padding:20px;
     display:flex;
@@ -69,4 +70,8 @@ export const MailStatus = styled.p`
     align-items: center;
     justify-content: center;
     font-size: 30px;
+`
+
+export const ContactListWrap = styled.div`
+
 `
