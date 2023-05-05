@@ -163,7 +163,7 @@ export const UITitleContainer = styled.div`
     position: relative;
     gap:16px;
     top:16.5px;
-
+    padding-top:2px;
     @media(max-width:500px){
         top:14px;
     }
