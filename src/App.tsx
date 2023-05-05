@@ -28,7 +28,7 @@ function App(){
         <GlobalContainer>
             <ThemeProvider theme={theme}>
                 <GlobalStyle />
-                <MonitorFrame src={assImage}/>
+                <MonitorFrame alt="monitor frame" src={assImage}/>
                 <ToggleOverlayEffect toggle={toggleScreen} setToggle={() => setToggleScreen(prev => !prev)} />
                 <MainContainer toggle={toggleScreen}>
                     <LinesOverlayEffect />

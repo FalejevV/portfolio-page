@@ -4,7 +4,7 @@ import gradiendPng from "../../img/GradiendPNG.png";
 function FadeOverlayEffect(){
     return(
         <>
-            <FOEImage src={gradiendPng}/>
+            <FOEImage alt="overlay-effect" src={gradiendPng}/>
         </>
     )
 }
