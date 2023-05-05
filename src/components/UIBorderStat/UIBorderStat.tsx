@@ -16,7 +16,8 @@ function UIBorderStat(props:{
     noLeft?:boolean,
     gCol?:string,
     textAlign?:string,
-    element?:JSX.Element
+    element?:JSX.Element,
+    customPadding?:string
 }){
     return(
         <UIBorderStatContainer gCol={props.gCol} displayToggle={props.displayToggle} doDisplay={props.doDisplay}>
@@ -26,6 +27,7 @@ function UIBorderStat(props:{
                 <UITitleLine />
             </UITitleContainer>
             <UIStatValueText
+                            customPadding={props.customPadding}
                             textAlign={props.textAlign}
                             noLeft={props.noLeft}
                             noRight={props.noRight}

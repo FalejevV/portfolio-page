@@ -26,7 +26,6 @@ function WorkAbout(props:{
             {props.isSmallScreen && <LineDivider></LineDivider>}
             
             <WorkAboutText>{props.isSmallScreen ? props.data.shortAbout : props.data.about}</WorkAboutText>
-            
                 <WorkAboutImageContainer>
                     <WorkAboutImages>
                         {props.data.images.map((image:string) => <WorkAboutImage onClick={() => props.setZoomedImage(image)} key={nanoid()} alt="Project image" src={image} />)}

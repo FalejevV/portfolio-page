@@ -29,26 +29,30 @@ function WorkPage(props:{
             
             <WorkPageContainer>
                     {!isSmallScreen && <>
-                        <UIBorderStat leftTitleLineWidth="11%" fullCorner title={"USER CREATIONS"} element={
-                        <WPCreationListGrid>
-                            <PText dimm textAlign="left">Active</PText>
-                            <PText dimm textAlign="left">Project Name</PText>
-                            {projects.map((project,index:number) => <WorkRow key={nanoid()} onClick={() => setCurrentProject(index)} name={project.name} toggle={currentProject===index} />)}
-                        </WPCreationListGrid>
+                        <UIBorderStat customPadding="25px 0px 25px 25px" leftTitleLineWidth="11%" fullCorner title={"USER CREATIONS"} element={
+
+                        <WorkPageContainer>
+                            <WPCreationListGrid>
+                                <PText dimm textAlign="left">Active</PText>
+                                <PText dimm textAlign="left">Project Name</PText>
+                                {projects.map((project,index:number) => <WorkRow key={nanoid()} onClick={() => setCurrentProject(index)} name={project.name} toggle={currentProject===index} />)}
+                            </WPCreationListGrid>
+                            
+
+                            <WPProjectReviewContainer>
+                                <WPProjectReviewMainContainer>
+                                    <WorkAbout setZoomedImage={setZoomedImage} data={projects[currentProject]} isSmallScreen={isSmallScreen}/>
+                                </WPProjectReviewMainContainer>
+
+                                <UIBorderStat leftTitleLineWidth="20%" title={"USED TOOLS"} noBottom noLeft noRight element={
+                                    <TagsContainer>
+                                        {projects[currentProject].usedTools.map((tool:string) => <Tag key={nanoid()} title={tool} />)}
+                                    </TagsContainer>
+                                }/>
+                            </WPProjectReviewContainer>
+                        </WorkPageContainer>
+
                         }/>
-
-                        <WPProjectReviewContainer>
-                            <WPProjectReviewMainContainer>
-                                <WorkAbout setZoomedImage={setZoomedImage} data={projects[currentProject]} isSmallScreen={isSmallScreen}/>
-                            </WPProjectReviewMainContainer>
-
-                            <UIBorderStat leftTitleLineWidth="20%" title={"USED TOOLS"} noBottom noLeft noRight element={
-                                <TagsContainer>
-                                    {projects[currentProject].usedTools.map((tool:string) => <Tag key={nanoid()} title={tool} />)}
-                                </TagsContainer>
-                            }/>
-                        </WPProjectReviewContainer>
-
                     </>
                     }
                     

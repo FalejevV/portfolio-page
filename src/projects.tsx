@@ -46,7 +46,7 @@ const projects:IProject[]= [
     },
     {
         name:"Frontend-Mentor",
-        about:"My exercises from the FrontendMentor website",
+        about:"My first practical tasks in creating various elements of web pages from the Frontend Mentor website",
         shortAbout:`My exercises from the FrontendMentor website`,
         images:[
             "/img/projects/fmentor1.png",

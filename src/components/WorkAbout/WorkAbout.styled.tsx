@@ -4,14 +4,16 @@ import { PText } from "../../styles/Style.styled";
 export const WorkAboutContainer = styled.div`
     width:100%;
     height:100%;
-    padding:25px;
     display:flex;
     flex-direction: column;
     gap:25px;
-
-    @media(max-width:1000px){
-        padding:20px 15px;
-        padding-bottom:30px;
+    padding-left:25px;
+    padding-bottom:25px;
+    
+    @media(max-width:940px){
+        padding-left:25px;
+        padding-bottom:25px;
+        padding-top:25px;
         gap:20px;
     }
 `
@@ -34,14 +36,16 @@ export const WorkAboutTitleContainer = styled.div`
     align-items: center;
     justify-content: space-between;
 `
-
 export const WorkAboutText = styled(PText)`
     font-size:24px;
+    line-height:30px;
     text-align: left;
     flex:1 auto;
     opacity: 0.6;
     transition: all 0.3s;
     overflow-y:scroll;
+    padding-right:15px;
+    max-height:150px;
     &:hover{
         opacity: 1;
     }

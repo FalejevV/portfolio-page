@@ -61,11 +61,10 @@ export const UIStatValueText = styled.div<{
     noRight?:boolean,
     noLeft?:boolean,
     textAlign?:string,
+    customPadding?:string,
 }>`
     width:100%;
-    padding:15px 25px;
-    padding-top:25px;
-    padding-bottom:25px;
+    padding:25px;
     color:${({ theme }) => theme.mainColor || "green"};
     font-size:24px;
     position:relative;
@@ -146,7 +145,15 @@ export const UIStatValueText = styled.div<{
     @media(max-width:1000px){
         font-size:20px;
         padding:25px 15px;
+        
+        ${({ customPadding }) => customPadding && css`
+        padding: ${customPadding};
+        `}
     }
+
+    ${({ customPadding }) => customPadding && css`
+        padding: ${customPadding};
+    `}
 `
 
 
