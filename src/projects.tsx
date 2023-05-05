@@ -45,18 +45,16 @@ const projects:IProject[]= [
         usedTools:["React native/EXPO", "Styled-native"],
     },
     {
-        name:"Frontend-Mentor",
-        about:"My first practical tasks in creating various elements of web pages from the Frontend Mentor website",
-        shortAbout:`My exercises from the FrontendMentor website`,
+        name:"Tricky stuff (Ongoing)",
+        about:"Web site with experiments where I try to recreate things that seem difficult to me. All bugs, errors and problems can be found on this site! Everything is under control (No)",
+        shortAbout:`Web site with experiments where I try to recreate things that seem difficult to me.`,
         images:[
-            "/img/projects/fmentor1.png",
-            "/img/projects/fmentor2.jpg",
-            "/img/projects/fmentor3.jpg",
-            "/img/projects/fmentor4.jpg",
+            "/img/projects/tricky-1.jpg",
+            "/img/projects/tricky-2.jpg",
         ],
-        liveLink:"https://www.frontendmentor.io/profile/FalejevV",
-        sourceLink:"https://github.com/FalejevV/main",
-        usedTools:["HTML/CSS/JS", "Styled", "React", "*maybe* API"],
+        liveLink:"https://react-tricky.vercel.app/",
+        sourceLink:"https://github.com/FalejevV/React-tricky",
+        usedTools:["HTML/CSS/JS", "Styled", "React", "*Anything*"],
     },
 ]
 
