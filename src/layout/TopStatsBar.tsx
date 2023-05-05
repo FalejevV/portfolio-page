@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import UIBorderStat from "../components/UIBorderStat/UIBorderStat";
 import { useEffect, useState } from "react";
 
-const TopStatsBarContainer = styled.div`
+const TopStatsBarContainer = styled.header`
     display: flex;
     gap:20px;
     width:100%;

@@ -35,7 +35,19 @@ export const MonitorFrame = styled.img`
     pointer-events: none;
 `
 
-export const MainContainer = styled.div<{
+const glowAnimations = keyframes`
+    0%{
+        filter: drop-shadow(0px 0px 0px #3789468b);
+    }
+    99%{
+        filter: drop-shadow(0px 0px 0px #3789468b);
+    }
+    100%{
+        filter: drop-shadow(0px 0px 25px #3789468b);
+    }
+`
+
+export const MainContainer = styled.main<{
     toggle:boolean,
 }>`
     cursor:url(${defaultCursor}), default;
@@ -52,7 +64,7 @@ export const MainContainer = styled.div<{
     margin-top:45px;
     border-radius: 10px;
 
-    filter: drop-shadow(0px -5px 20px #3789465e);
+    animation:${glowAnimations} 1s forwards;
     @media(max-width:1550px){
         margin-top:0px;
     }

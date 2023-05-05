@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import pointerCursor from "../../img/PointerCursor.png";
 
 
-export const MenuContainer = styled.div`
+export const MenuContainer = styled.nav`
     width:100%;
     height:100%;
     display: flex;    

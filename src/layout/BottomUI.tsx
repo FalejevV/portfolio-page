@@ -3,7 +3,7 @@ import UIBorderBottomCorner from "../components/UIBorderBottomCorner/UIBorderBot
 import Menu from "../components/Menu/Menu";
 
 
-const UIContainer = styled.div`
+const UIContainer = styled.footer`
     margin-top:36px;
     width: 100%;
     height: 70px;

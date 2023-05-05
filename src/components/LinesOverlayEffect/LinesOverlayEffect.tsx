@@ -3,7 +3,7 @@ import linesGif from "../../img/LinesGif.gif"
 
 function LinesOverlayEffect(){
     return(
-        <LOEGif src={linesGif}/>
+        <LOEGif alt="overlay-effect"src={linesGif}/>
     )
 }
 
