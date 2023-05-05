@@ -59,10 +59,10 @@ export const SubmitButton = styled.button`
 
 export const MailStatus = styled.p`
     position: absolute;
-    width:calc(100% + 60px);
-    height: calc(100% + 60px);
-    left:-30px;
-    top:-30px;
+    width:calc(100% + 35px);
+    height: calc(100% + 35px);
+    left:-25px;
+    top:-25px;
     background-color: ${({ theme }) => theme.dimmColor || "red"};
 
     color: ${({ theme }) => theme.mainColor || "red"};

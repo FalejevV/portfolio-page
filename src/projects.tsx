@@ -18,7 +18,7 @@ const projects:IProject[]= [
     },
     {
         name:"<DIV> Game </DIV>",
-        about:`The site is a joke clicker game in which you have to "Save the world by centering the DIV". I can't tell you more about the site. This is a stupid site, so I both want and don't want to show it here`,
+        about:`The website is a joke clicker game in which you have to "Save the world by centering the DIV". I can't tell you more about the page. This is a stupid project, so I both want and don't want to show it here`,
         shortAbout:`This is a joke clicker game. It has: ...nothing special`,
         images:[
             "/img/projects/divgame1.jpg",
@@ -46,8 +46,8 @@ const projects:IProject[]= [
     },
     {
         name:"Tricky stuff (Ongoing)",
-        about:"Web site with experiments where I try to recreate things that seem difficult to me. All bugs, errors and problems can be found on this site! Everything is under control (No)",
-        shortAbout:`Web site with experiments where I try to recreate things that seem difficult to me.`,
+        about:"Website with experiments where I try to recreate things that seem difficult to me. All bugs, errors and problems can be found on this site! Everything is under control (No)",
+        shortAbout:`Website with experiments where I try to recreate things that seem difficult to me.`,
         images:[
             "/img/projects/tricky-1.jpg",
             "/img/projects/tricky-2.jpg",

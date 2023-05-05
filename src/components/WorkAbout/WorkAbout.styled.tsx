@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { PText } from "../../styles/Style.styled";
+import pointerCursor from "../../img/PointerCursor.png";
 
 export const WorkAboutContainer = styled.div`
     width:100%;
@@ -15,6 +16,11 @@ export const WorkAboutContainer = styled.div`
         padding-bottom:25px;
         padding-top:25px;
         gap:20px;
+    }
+
+    @media(max-width:650px){
+        padding:15px;
+        padding-bottom:25px;
     }
 `
 
@@ -45,7 +51,7 @@ export const WorkAboutText = styled(PText)`
     transition: all 0.3s;
     overflow-y:scroll;
     padding-right:15px;
-    max-height:150px;
+    height:500px;
     &:hover{
         opacity: 1;
     }
@@ -53,6 +59,7 @@ export const WorkAboutText = styled(PText)`
     @media(max-width:940px){
         flex:unset;
         opacity: 1;
+        max-height: 170px;
     }
 
     @media(max-width:650px){
@@ -91,7 +98,7 @@ export const WorkAboutImages = styled.div`
 export const WorkAboutImage = styled.img`
     height:100%;
     object-fit: cover;
-
+    cursor: url(${pointerCursor}) , pointer;
     filter: sepia(100%) hue-rotate(100deg) saturate(900%) brightness(0.5);
 
     transition: all 0.3s;
@@ -138,6 +145,7 @@ export const ZoomedImageContainer = styled.div`
     max-height: ${({ theme }) => theme.maxHeight || "1000px"};
     z-index:9999;
     background-color: #0000009d;
+    cursor: url(${pointerCursor}) , pointer;
 `
 
 export const ZoomedImage = styled.img`

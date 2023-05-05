@@ -10,13 +10,14 @@ import nextIcon from "../img/skill-icons/next-icon.svg";
 import reactIcon from "../img/skill-icons/react-icon.svg";
 import styledIcon from "../img/skill-icons/styled-icon.svg";
 import expressIcon from "../img/skill-icons/express-icon.svg";
-
+import reduxIcon from "../img/skill-icons/redux-icon.svg";
+import typescriptIcon from "../img/skill-icons/typescript-icon.svg";
 
 const SkillItemsContainer = styled.div`
     padding:5px 0px;
     display:flex;
     flex-wrap: wrap;
-    gap:20px;
+    gap:12px;
     width:100%;
 `
 
@@ -28,9 +29,11 @@ function SkillItemList(){
             <SkillItem opacity="0.95" icon={teaIcon} skillName={"Tea"}  />
             <SkillItem icon={cssIcon} skillName={"CSS"}  />
             <SkillItem icon={htmlIcon} skillName={"HTML"}  />
-            <SkillItem icon={jsIcon} skillName={"JS"}  />
+            <SkillItem icon={jsIcon} skillName={"JavaScript"}  />
             <SkillItem icon={reactIcon} skillName={"React"}  />
             <SkillItem icon={styledIcon} skillName={"Styled"}  />
+            <SkillItem opacity="0.3" icon={reduxIcon} skillName={"Redux"}  />
+            <SkillItem opacity="0.3" icon={typescriptIcon} skillName={"TypeScript"}  />
             <SkillItem opacity="0.3" icon={nextIcon} skillName={"NextJS"}  />
             <SkillItem opacity="0.2" icon={expressIcon} skillName={"ExpressJS"}  />
         </SkillItemsContainer>

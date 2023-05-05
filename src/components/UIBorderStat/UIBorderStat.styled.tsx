@@ -147,7 +147,7 @@ export const UIStatValueText = styled.div<{
         padding:25px 15px;
         
         ${({ customPadding }) => customPadding && css`
-        padding: ${customPadding};
+            padding: ${customPadding};
         `}
     }
 
