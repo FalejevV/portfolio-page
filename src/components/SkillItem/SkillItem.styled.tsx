@@ -26,8 +26,8 @@ export const SkillItemContainer = styled.div<{
     }
 
     @media(max-width:600px){
-        max-width: 70px;
-        max-height: 70px;
+        max-width: 80px;
+        max-height: 80px;
     }
 `
 
@@ -37,8 +37,8 @@ export const SkillImage = styled.img`
     aspect-ratio: 1/1;
 
     @media(max-width:600px){
-        max-width: 30px;
-        max-height: 30px;
+        max-width: 40px;
+        max-height: 40px;
     }
 `
 

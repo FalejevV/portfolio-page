@@ -45,12 +45,14 @@ const projects:IProject[]= [
         usedTools:["React native/EXPO", "Styled-native"],
     },
     {
-        name:"Tricky stuff (Ongoing)",
+        name:"Tricky stuff",
         about:"Website with experiments where I try to recreate things that seem difficult to me. All bugs, errors and problems can be found on this site! Everything is under control (No)",
         shortAbout:`Website with experiments where I try to recreate things that seem difficult to me.`,
         images:[
             "/img/projects/tricky-1.jpg",
             "/img/projects/tricky-2.jpg",
+            "/img/projects/tricky-3.jpg",
+            "/img/projects/tricky-4.jpg",
         ],
         liveLink:"https://react-tricky.vercel.app/",
         sourceLink:"https://github.com/FalejevV/React-tricky",
