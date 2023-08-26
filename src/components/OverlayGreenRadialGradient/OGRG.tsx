@@ -7,8 +7,7 @@ const OGRG = styled.div`
     top:0px;
     width:1440px;
     height: 100%;
-    background: radial-gradient(136.57% 136.57% at 50% 50%, rgba(0, 0, 0, 0) 0%, #000000 100%);
-    background-color: #0B4716;
+    background-color: #022209;
     z-index: 1;
     pointer-events: none;
     user-select: none;

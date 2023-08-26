@@ -37,6 +37,8 @@ function App(){
                     <TopStatsBar />
 
                     {page === "HOME" && <HomePage toggle={true} /> }
+                    {page === "WORK" && <WorkPage toggle={true} /> }
+                    {page === "CONTACT" && <ContactPage toggle={true} /> }
 
                     <BottomUI setPage={setPage} page={page} />
                 </MainContainer>

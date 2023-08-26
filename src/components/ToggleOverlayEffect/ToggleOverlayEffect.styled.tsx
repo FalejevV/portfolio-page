@@ -29,8 +29,8 @@ export const TOEContainer = styled.div<{
     width: ${({ theme }) => `calc(${theme.maxWidth} + 5px)`};
     height: ${({ theme }) => theme.maxHeight};
     background-color: black;
-    left:50%;
-    top:45px;
+    left:calc(50% - 3px);
+    top:46px;
     transform: translateX(-50%);
     position: absolute;
     pointer-events: default;

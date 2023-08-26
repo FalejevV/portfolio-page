@@ -6,7 +6,7 @@ export const LOEGif = styled.img`
     top:0px;
     width:1498px;
     height:1120px;
-    opacity:0.03;
+    display:none;
     pointer-events: none;
     user-select: none;
 `
