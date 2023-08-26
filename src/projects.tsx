@@ -33,7 +33,7 @@ const projects:IProject[]= [
     {
         name:"Mobile routes database",
         about:"Experimenting with React Native / Expo. A notebook that stores information about different companies. In addition to modifying, adding, and deleting information, there is a search, sorting by country, as well as importing and exporting the database using the device storage. In this case, the database is a text file that stores records in JSON format.",
-        shortAbout:`Mobile app used to store compaty information. It has: Entry creation, search, import and export`,
+        shortAbout:`Mobile app used to store company information. It has: Entry creation, search, import and export`,
         images:[
             "/img/projects/DB1.png",
             "/img/projects/DB2.png",
