@@ -36,9 +36,9 @@ function App(){
                     <OverlayGreenRadialGradient />
                     <TopStatsBar />
 
-                    <HomePage toggle={page === "HOME"} />
-                    <WorkPage toggle={page === "WORK"} />
-                    <ContactPage toggle={page === "CONTACT"} />
+                    {page === "HOME" && <HomePage toggle={true} /> }
+                    {page === "WORK" && <WorkPage toggle={true} /> }
+                    {page === "CONTACT" && <ContactPage toggle={true} /> }
 
                     <BottomUI setPage={setPage} page={page} />
                 </MainContainer>

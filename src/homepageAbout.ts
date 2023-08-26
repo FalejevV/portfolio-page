@@ -2,10 +2,11 @@ const about = {
     role:`Frontend Developer`,
     phrase: `Cool opening phrase not found`,
     about: `
-    I love to create stuff, sitting at the computer.
-     After graduating from college, experimented with different areas of programming and eventually settled on creating websites (around 2022).
-      Since then, i try to learn and practice every day creating different projects.
-       The time i spend at the computer i mix with walking, cycling, and other new things that my hands have reached.
+    Hello from the other side of the screen! I've got a passion for bringing ideas to life on the digital canvas.
+     After finishing college, I played around with a bunch of tech stuff until I found my sweet spot with web design in 2022.
+      Now, I'm all about building websites and learning something new every day. 
+      When I'm not typing away, I'm out walking, riding my bike, or trying out whatever fun hobby I've recently found.
+      Let's make something awesome, shall we?
     `
 }
 
