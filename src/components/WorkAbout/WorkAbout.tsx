@@ -10,7 +10,16 @@ function WorkAbout(props:{
     data:IProject,
     setZoomedImage:Function,
     isSmallScreen:boolean,
+    inView?:boolean
 }){
+
+    function getImages(){
+        if(props.inView === undefined || props.inView){
+            return  props.data.images.map((image:string) => <WorkAboutImage onClick={() => props.setZoomedImage(image)} key={nanoid()} alt="Project image" src={image} />)
+        }else{
+            return;
+        }
+    }
     return(
         <WorkAboutContainer>
             <WorkAboutTitleContainer>
@@ -28,7 +37,7 @@ function WorkAbout(props:{
             <WorkAboutText>{props.isSmallScreen ? props.data.shortAbout : props.data.about}</WorkAboutText>
                 <WorkAboutImageContainer>
                     <WorkAboutImages>
-                        {props.data.images.map((image:string) => <WorkAboutImage onClick={() => props.setZoomedImage(image)} key={nanoid()} alt="Project image" src={image} />)}
+                        {getImages()}
                     </WorkAboutImages>
                 </WorkAboutImageContainer>
         </WorkAboutContainer>
