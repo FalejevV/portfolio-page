@@ -88,18 +88,13 @@ export const TagsContainer = styled.div`
 export const MobileContainer = styled(WorkPageContainer)`
     flex-direction: column;
     width:100%;
-    gap:50px;
+    gap:10px;
     max-height: unset;
     overflow-y: scroll;
-    max-height: 700px;
     padding-top: 4px;
 
     ${WPProjectReviewContainer}{
         border:3px solid ${({ theme }) => theme.dimmColor || "red"};
-    }
-
-    @media(max-width:500px){
-        max-height: 770px;
     }
 `
 

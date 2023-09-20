@@ -105,10 +105,6 @@ export const WorkAboutImage = styled.img`
     &:hover{
         filter: unset;
     }
-
-    @media(max-width:768px){
-        filter:unset;
-    }
 `
 
 export const LinkContainer = styled.div`

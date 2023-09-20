@@ -2,44 +2,37 @@ import { nanoid } from "nanoid";
 import { IProject } from "../../projects";
 
 import { LinkContainer, WorkAboutContainer, WorkAboutImage, WorkAboutImageContainer, WorkAboutImages, WorkAboutText, WorkAboutTitle, WorkAboutTitleContainer } from "./WorkAbout.styled";
-import { LineDivider, Link } from "../../styles/Style.styled";
+import { Link } from "../../styles/Style.styled";
 
 
 
-function WorkAbout(props:{
-    data:IProject,
-    setZoomedImage:Function,
-    isSmallScreen:boolean,
-    inView?:boolean
-}){
+function WorkAbout(props: {
+    data: IProject,
+    setZoomedImage: Function,
+    isSmallScreen: boolean
+}) {
 
-    function getImages(){
-        if(props.inView === undefined || props.inView){
-            return  props.data.images.map((image:string) => <WorkAboutImage onClick={() => props.setZoomedImage(image)} key={nanoid()} alt="Project image" src={image} />)
-        }else{
-            return;
-        }
+    function getImages() {
+        return props.data.images.map((image: string) => <WorkAboutImage onClick={() => props.setZoomedImage(image)} key={nanoid()} alt="Project image" src={image} />)
     }
-    return(
+    return (
         <WorkAboutContainer>
-            <WorkAboutTitleContainer>
-                <WorkAboutTitle textAlign="left">{props.data.name}</WorkAboutTitle>
-                {!props.isSmallScreen && 
-                <LinkContainer>
-                    {props.data.liveLink.trim() !== "" && <Link target="_blank" href={props.data.liveLink}>LIVE</Link>}
-                    {props.data.sourceLink.trim() !== "" && <Link target="_blank" href={props.data.sourceLink}>SOURCE</Link>}
-                </LinkContainer>
-                }
-            </WorkAboutTitleContainer>
+            {!props.isSmallScreen &&
+                <WorkAboutTitleContainer>
+                    <WorkAboutTitle textAlign="left">{props.data.name}</WorkAboutTitle>
+                    <LinkContainer>
+                        {props.data.liveLink.trim() !== "" && <Link target="_blank" href={props.data.liveLink}>LIVE</Link>}
+                        {props.data.sourceLink.trim() !== "" && <Link target="_blank" href={props.data.sourceLink}>SOURCE</Link>}
+                    </LinkContainer>
+                </WorkAboutTitleContainer>
+            }
 
-            {props.isSmallScreen && <LineDivider></LineDivider>}
-            
             <WorkAboutText>{props.isSmallScreen ? props.data.shortAbout : props.data.about}</WorkAboutText>
-                <WorkAboutImageContainer>
-                    <WorkAboutImages>
-                        {getImages()}
-                    </WorkAboutImages>
-                </WorkAboutImageContainer>
+            <WorkAboutImageContainer>
+                <WorkAboutImages>
+                    {getImages()}
+                </WorkAboutImages>
+            </WorkAboutImageContainer>
         </WorkAboutContainer>
     )
 }
