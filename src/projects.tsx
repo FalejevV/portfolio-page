@@ -27,7 +27,7 @@ const projects: IProject[] = [
             "/img/projects/iae5.jpg",
             "/img/projects/iae6.jpg",
         ],
-        liveLink: "https://iaeround.xyz/",
+        liveLink: "https://iaeround.netlify.app/",
         sourceLink: "https://github.com/FalejevV/iaeround-frontend",
         usedTools: ["HTML/CSS/JS", "Styled", "React", "Redux", "NextJS", "ExpressJS", "Google-Storage", "JWToken", "AWS-PostgreSQL", "*ALotOfPain*"],
     },
