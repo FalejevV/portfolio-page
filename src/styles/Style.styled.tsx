@@ -115,6 +115,10 @@ export const PContainer = styled.div<{
     @media(max-width:880px){
         padding-bottom: 20px;
     }
+
+    @media(max-width:500px){
+        padding-bottom: 0px;
+    }
 `
 
 export const PText = styled.p<{

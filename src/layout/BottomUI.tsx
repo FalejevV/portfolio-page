@@ -9,6 +9,10 @@ const UIContainer = styled.footer`
     height: 70px;
     display: flex;
     justify-content: space-between;
+
+    @media(max-width:500px){
+        margin-top:0px;
+    }
 `
 
 

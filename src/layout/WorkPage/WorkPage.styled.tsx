@@ -5,6 +5,11 @@ export const WorkPageContainer = styled.div`
     height:100%;
     display: flex;
     align-items: flex-start;
+
+    @media(max-width:500px){
+        max-height:820px;
+        margin-bottom:10px;
+    }
 `
 
 

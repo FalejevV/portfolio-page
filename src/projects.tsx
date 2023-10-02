@@ -2,7 +2,7 @@ const projects: IProject[] = [
     {
         name: "Games Platform (Ongoing)",
         about: "An interactive platform for gamers to log and review their collection. Users can sign in, track playtime, completion, and give detailed feedback on various game aspects. The site offers insights into individual gaming trends and aggregates user reviews for an evolving game list. Data is sourced from IGDB and stored in Supabase. (test user falejevv@gmail.com : test123)",
-        shortAbout: "A site for gamers to log, review, and see their play trends. Rate games on key aspects, with rankings based on community feedback. Data from IGDB, processed and stored in Supabase.(test user falejevv@gmail.com : test123)",
+        shortAbout: "A site for gamers to log, review, and see their play trends. Rate games on key aspects, with rankings based on community feedback.(test user falejevv@gmail.com : test123)",
         images: [
             "/img/projects/gg1.webp",
             "/img/projects/gg2.webp",
