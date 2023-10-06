@@ -12,14 +12,11 @@ export const WorkAboutContainer = styled.div`
     padding-bottom:25px;
     
     @media(max-width:940px){
-        padding-left:25px;
-        padding-bottom:25px;
-        padding-top:25px;
+        padding:15px;
         gap:20px;
     }
 
     @media(max-width:650px){
-        padding:15px;
         padding-bottom:25px;
     }
 `
@@ -59,7 +56,8 @@ export const WorkAboutText = styled(PText)`
     @media(max-width:940px){
         flex:unset;
         opacity: 1;
-        max-height: 170px;
+        height-fit;
+        flex:0 0;
     }
 
     @media(max-width:650px){
@@ -103,6 +101,10 @@ export const WorkAboutImage = styled.img`
 
     transition: all 0.3s;
     &:hover{
+        filter: unset;
+    }
+
+    @media(max-width:1000px){
         filter: unset;
     }
 `

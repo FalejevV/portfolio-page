@@ -71,6 +71,7 @@ export const MainContainer = styled.main<{
 
     @media(max-width:500px){
         padding:10px;
+        padding-bottom:0px;
     }
 
 
@@ -112,7 +113,8 @@ export const PContainer = styled.div<{
     font-size: 40px;
     padding:50px 0px;
     
-    @media(max-width:880px){
+    @media(max-width:940px){
+        padding-top:35px;
         padding-bottom: 20px;
     }
 
