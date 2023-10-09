@@ -20,18 +20,18 @@ function ContactPage(props:{
         }
         e.preventDefault();
         setButtonDisabled(true);
-
+        
         let formTarget = e.target as HTMLFormElement;
         let title = formTarget[0] as HTMLInputElement;
         let email = formTarget[1] as HTMLInputElement;
         let message = formTarget[2] as HTMLInputElement;
         if(title && email && message){
             if(title.value.trim() !== "" && email.value.trim() !== "" && message.value.trim() !== ""){
-                emailjs.send('service_6s18etb','template_p2vtkn3', {
+                emailjs.send(process.env.REACT_APP_SERVICE ||"",process.env.REACT_APP_TEMPLATE || "", {
                     title:title.value,
                     email:email.value,
                     message:message.value,
-                }, 'CI3tEJbGMRgp2vHXa')
+                }, process.env.REACT_APP_KEY || "")
                 .then(function(response) {
                     setMailStatus("Message sent!");
                     setButtonDisabled(false);

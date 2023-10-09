@@ -9,7 +9,7 @@ function ContactIcon(props:{
     href:string,
 }){
     return(
-        <a href={props.href} target="_blank">
+        <a href={props.href} target="_blank" rel="noreferrer">
             <ContactContainer>
                 <ContactIconSVG viewBox="0 0 24 24">
                     {props.svg}

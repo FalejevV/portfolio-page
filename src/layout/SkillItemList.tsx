@@ -16,10 +16,20 @@ import tailwindIcon from "../img/skill-icons/tailwind-icon.svg"
 
 const SkillItemsContainer = styled.div`
     padding:5px 0px;
-    display:flex;
-    flex-wrap: wrap;
+    display:grid;
+    grid-template-columns: repeat( auto-fit, minmax(120px, 1fr));
+    grid-auto-columns: 150px;
     gap:12px;
     width:100%;
+
+    @media(max-width:600px){
+        grid-template-columns: repeat( auto-fit, minmax(90px, 1fr));
+    }
+    @media(max-width:500px){
+        grid-template-columns: repeat( auto-fit, minmax(80px, 1fr));
+    }
+
+
 `
 
 

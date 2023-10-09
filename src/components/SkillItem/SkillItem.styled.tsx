@@ -7,7 +7,6 @@ export const SkillItemContainer = styled.div<{
 }>`
     cursor:url(${defaultCursor}), default;
     width:100%;
-    max-width: 120px;
     aspect-ratio:1/1;
     background-color:${({ theme }) => theme.mainColor || "red"};
     padding:10px;
@@ -23,11 +22,6 @@ export const SkillItemContainer = styled.div<{
 
     &:hover{
         opacity:1;
-    }
-
-    @media(max-width:600px){
-        max-width: 80px;
-        max-height: 80px;
     }
 `
 

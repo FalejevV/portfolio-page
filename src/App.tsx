@@ -8,7 +8,6 @@ import TopStatsBar from "./layout/TopStatsBar";
 import WorkPage from "./layout/WorkPage/WorkPage";
 import HomePage from "./layout/HomePage/HomePage";
 import ContactPage from "./layout/ContactPage/ContactPage";
-import LinesOverlayEffect from "./components/LinesOverlayEffect/LinesOverlayEffect";
 import FadeOverlayEffect from "./components/FadeOverlayEffect/FadeOverlayEffect";
 import monitorImage from "./img/monitor.png";
 import ToggleOverlayEffect from "./components/ToggleOverlayEffect/ToggleOverlayEffect";
@@ -31,7 +30,6 @@ function App(){
                 <MonitorFrame alt="monitor frame" src={monitorImage}/>
                 <ToggleOverlayEffect toggle={toggleScreen} setToggle={() => setToggleScreen(prev => !prev)} />
                 <MainContainer toggle={toggleScreen}>
-                    <LinesOverlayEffect />
                     <FadeOverlayEffect />
                     <OverlayGreenRadialGradient />
                     <TopStatsBar />

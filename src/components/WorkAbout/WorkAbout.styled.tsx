@@ -74,7 +74,7 @@ export const WorkAboutImageContainer = styled.div`
     min-height: 200px;
     overflow: scroll;
     position:relative;
-
+    ::-webkit-scrollbar-corner { background: #0000000; }
 
     @media(max-width:650px){
         min-height: 160px;
