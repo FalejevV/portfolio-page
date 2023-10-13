@@ -43,8 +43,8 @@ function SkillItemList() {
             <SkillItem icon={jsIcon} skillName={"JavaScript"} />
             <SkillItem icon={reactIcon} skillName={"React"} />
             <SkillItem icon={styledIcon} skillName={"Styled"} />
+            <SkillItem opacity="0.5" icon={tailwindIcon} skillName={"Tailwind"} />
             <SkillItem opacity="0.3" icon={reduxIcon} skillName={"Redux"} />
-            <SkillItem opacity="0.3" icon={tailwindIcon} skillName={"Tailwind"} />
             <SkillItem opacity="0.3" icon={typescriptIcon} skillName={"TypeScript"} />
             <SkillItem opacity="0.3" icon={nextIcon} skillName={"NextJS"} />
             <SkillItem opacity="0.2" icon={expressIcon} skillName={"ExpressJS"} />

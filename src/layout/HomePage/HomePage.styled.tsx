@@ -62,3 +62,11 @@ export const UserSkillsContainer = styled.div`
         max-height: 270px;
     }
 `
+
+
+export const AlertSymbolText = styled.p`
+    display:none;
+    @media(max-width:450px){
+        display:block;
+    }
+`

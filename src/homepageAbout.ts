@@ -1,6 +1,6 @@
 const about = {
   role: `Frontend Developer`,
-  phrase: `Cool opening phrase not found`,
+  phrase: `Cool phrase not found`,
   about: `
     Greetings from the digital realm! 
     After experimenting with different aspects of programming, I discovered my passion for web development in 2022.
