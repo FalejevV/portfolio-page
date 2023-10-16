@@ -43,34 +43,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'VT323', monospace;
     z-index: 5;
     pointer-events: auto;
-        &::selection{
-            background-color: #17FF42;
-            color:black;
-        }
-    }
-
-    * {
-        scrollbar-width: thin;
-        scrollbar-color: #00ff1e transparent !important;
-    }
-
-    *::-webkit-scrollbar {
-        width: 8px;
-        height:8px;
-    }
-
-    *::-webkit-scrollbar-track {
-        background: #ffffff0;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-        background: #00ff1ea2;
-    }
-
-    *::-webkit-scrollbar-thumb {
-        background-color: #00ff1e;
-        border-radius: 0px;
-        border: 0px none #ffffff0;
+        
     }
 
 `

@@ -11,35 +11,68 @@ import ContactPage from "./layout/ContactPage/ContactPage";
 import monitorImage from "./img/monitor.png";
 import ToggleOverlayEffect from "./components/ToggleOverlayEffect/ToggleOverlayEffect";
 
-const theme = {
-    maxWidth:"1440px",
-    maxHeight:"1024px",
-    mainColor:"#17FF42",
-    dimmColor:"#256832",
-}
 
-function App(){
-    const [page,setPage] = useState("HOME");
+
+
+const themeMainColors = [
+    "#11b12e",
+    "#2aaed6",
+    "#cc9133"
+]
+
+const themeDimmColors = [
+    "#256832",
+    "#1a6a83",
+    "#ad7c2c"
+]
+
+const themeBackgroundColors = [
+    "radial-gradient(circle, rgba(3,48,13,1) 0%, rgba(0,17,4,1) 100%)",
+    "radial-gradient(circle, #021e27 0%, #021f27 100%)",
+    "radial-gradient(circle, #493310 0%, #201401 100%)"
+]
+
+const hueRotation = [
+    "100deg",
+    "150deg",
+    "10deg"
+]
+
+function App() {
+    const [page, setPage] = useState("HOME");
     const [toggleScreen, setToggleScreen] = useState(false);
-    
-    return(
-        <GlobalContainer>
-            <ThemeProvider theme={theme}>
+    const [themeId, setThemeId] = useState<number>(0);
+
+
+    const theme = {
+        maxWidth: "1440px",
+        maxHeight: "1024px",
+        mainColor: themeMainColors[themeId],
+        dimmColor: themeDimmColors[themeId],
+        backgroundColor: themeBackgroundColors[themeId],
+        hueRotate: hueRotation[themeId]
+    }
+
+    return (
+        <ThemeProvider theme={theme}>
+            <GlobalContainer>
+
                 <GlobalStyle />
-                <MonitorFrame alt="monitor frame" src={monitorImage}/>
-                <ToggleOverlayEffect toggle={toggleScreen} setToggle={() => setToggleScreen(prev => !prev)} />
+                <MonitorFrame alt="monitor frame" src={monitorImage} />
+                <ToggleOverlayEffect toggle={toggleScreen} setToggle={() => setToggleScreen(prev => !prev)} setThemeId={setThemeId} themeId={themeId} />
                 <MainContainer toggle={toggleScreen}>
                     <OverlayGreenRadialGradient />
                     <TopStatsBar />
 
-                    {page === "HOME" && <HomePage toggle={true} /> }
-                    {page === "WORK" && <WorkPage toggle={true} /> }
-                    {page === "CONTACT" && <ContactPage toggle={true} /> }
+                    {page === "HOME" && <HomePage toggle={true} />}
+                    {page === "WORK" && <WorkPage toggle={true} />}
+                    {page === "CONTACT" && <ContactPage toggle={true} />}
 
                     <BottomUI setPage={setPage} page={page} />
                 </MainContainer>
-            </ThemeProvider>
-        </GlobalContainer>
+
+            </GlobalContainer>
+        </ThemeProvider>
     )
 }
 

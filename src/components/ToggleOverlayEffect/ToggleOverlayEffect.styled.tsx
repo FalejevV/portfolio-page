@@ -1,9 +1,12 @@
 import styled, { css, keyframes } from "styled-components";
 
-const toggleAnim = keyframes`
+const toggleAnim = (props:{theme:{dimmColor:string}}) => keyframes`
     0%{
         z-index: 9999;
-        background-color: #256832;
+        background-color:black;
+    }
+    20%{
+        background-color: ${props.theme.dimmColor};
     }
     71%{
         background-color: black;
@@ -14,8 +17,8 @@ const toggleAnim = keyframes`
     90%{
         background-color: black;
     }
-    99%{
-        background-color: #256832;
+    95%{
+        background-color: ${props.theme.dimmColor};
     }
     100%{
         z-index: -1;
@@ -24,7 +27,7 @@ const toggleAnim = keyframes`
 `
 
 export const TOEContainer = styled.div<{
-    toggle:boolean,
+    toggle: boolean,
 }>`
     width: ${({ theme }) => `calc(${theme.maxWidth} + 5px)`};
     height: ${({ theme }) => theme.maxHeight};
@@ -45,13 +48,13 @@ export const TOEContainer = styled.div<{
 `
 
 export const TOEButtonContainer = styled.div<{
-    toggle:boolean,
+    toggle: boolean,
 }>`
     cursor: pointer;
     position: absolute;
     width:40px;
     height:40px;
-    left:${({ theme }) => `calc(50% + (${theme.maxWidth} / 2) + 25px)` || "1000px"};
+    left:${({ theme }) => `calc(50% + (${theme.maxWidth} / 2) + 30px)` || "1000px"};
     top: ${({ theme }) => `calc(${theme.maxHeight} + 50px)` || "1000px"};
     border-radius:5px;
     display:flex;
@@ -103,4 +106,22 @@ export const TOEArrowSVG = styled.svg`
     transform: rotate(-45deg);
     opacity:0;
     animation: ${flickerArrowAnimation} 2s ease-out 5s infinite normal none;
+`
+
+
+export const ColorPicker = styled.div`
+    cursor: pointer;
+    position: absolute;
+    width:35px;
+    height:35px;
+    left:${({ theme }) => `calc(50% + (${theme.maxWidth} / 2) + 33px)` || "1000px"};
+    top: ${({ theme }) => `calc(${theme.maxHeight} - 10px)` || "1000px"};
+    background-color: ${({ theme }) => theme.dimmColor};
+    box-shadow: 2px 0px 7px 4px rgba(0,0,0,0.5) inset;
+    -webkit-box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.5) inset;
+    -moz-box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.5) inset;
+    opacity:0.8;
+    &:active{
+        transform:scale(0.95);
+    }
 `

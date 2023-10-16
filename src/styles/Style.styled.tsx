@@ -17,6 +17,39 @@ export const GlobalContainer = styled.div`
     @media(min-width:2023px){
         transform: unset;
     }
+
+    *{
+        &::selection{
+            background-color: ${({ theme }) => theme.mainColor || "black"};
+            color:black;
+        }
+    }
+
+    
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: ${({ theme }) => theme.mainColor || "black"} transparent !important;
+    }
+
+    *::-webkit-scrollbar {
+        width: 8px;
+        height:8px;
+    }
+
+    *::-webkit-scrollbar-track {
+        background: #ffffff0;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: ${({ theme }) => theme.mainColor || "black"};
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: ${({ theme }) => theme.mainColor || "black"};
+        border-radius: 0px;
+        border: 0px none #ffffff0;
+    }
+
 `
 
 export const MonitorFrame = styled.img`
@@ -35,17 +68,20 @@ export const MonitorFrame = styled.img`
     pointer-events: none;
 `
 
-const glowAnimations = keyframes`
-    0%{
-        filter: drop-shadow(0px 0px 0px #3789468b);
+
+const glowAnimations = (props: {theme: {dimmColor:string}}) => keyframes`
+    0% {
+        filter: drop-shadow(0px 0px 0px ${props.theme.dimmColor});
     }
-    99%{
-        filter: drop-shadow(0px 0px 0px #3789468b);
+    99% {
+        filter: drop-shadow(0px 0px 0px ${props.theme.dimmColor});
     }
-    100%{
-        filter: drop-shadow(0px 0px 25px #3789468b);
+    100% {
+        filter: drop-shadow(0px 0px 25px ${props.theme.dimmColor});
     }
-`
+`;
+
+
 
 export const MainContainer = styled.main<{
     toggle:boolean,
