@@ -4,7 +4,6 @@ const toggleAnim = (props: { theme: { dimmColor: string } }) => keyframes`
     0%{
         z-index: 9999;
         background-color:black;
-        filter: brightness(60%); 
     }
     20%{
         background-color: ${props.theme.dimmColor};
@@ -43,7 +42,7 @@ export const TOEContainer = styled.div<{
         animation: ${toggleAnim} 1s forwards;
     `}
     border-radius:4px;
-
+    filter: brightness(20%); 
     @media(max-width:1550px){
         display: none;
     }
