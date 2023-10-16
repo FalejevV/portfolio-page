@@ -38,6 +38,12 @@ const hueRotation = [
     "10deg"
 ]
 
+const knobRotation = [
+    "0deg",
+    "45deg",
+    "90deg"
+]
+
 function App() {
     const [page, setPage] = useState("HOME");
     const [toggleScreen, setToggleScreen] = useState(false);
@@ -50,7 +56,8 @@ function App() {
         mainColor: themeMainColors[themeId],
         dimmColor: themeDimmColors[themeId],
         backgroundColor: themeBackgroundColors[themeId],
-        hueRotate: hueRotation[themeId]
+        hueRotate: hueRotation[themeId],
+        knobRotation: knobRotation[themeId]
     }
 
     return (

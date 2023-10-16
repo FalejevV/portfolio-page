@@ -1,6 +1,6 @@
 import styled, { css, keyframes } from "styled-components";
 
-const toggleAnim = (props:{theme:{dimmColor:string}}) => keyframes`
+const toggleAnim = (props: { theme: { dimmColor: string } }) => keyframes`
     0%{
         z-index: 9999;
         background-color:black;
@@ -112,16 +112,41 @@ export const TOEArrowSVG = styled.svg`
 export const ColorPicker = styled.div`
     cursor: pointer;
     position: absolute;
-    width:35px;
-    height:35px;
-    left:${({ theme }) => `calc(50% + (${theme.maxWidth} / 2) + 33px)` || "1000px"};
+    width:28px;
+    height:28px;
+    left:${({ theme }) => `calc(50% + (${theme.maxWidth} / 2) + 36px)` || "1000px"};
     top: ${({ theme }) => `calc(${theme.maxHeight} - 10px)` || "1000px"};
     background-color: ${({ theme }) => theme.dimmColor};
     box-shadow: 2px 0px 7px 4px rgba(0,0,0,0.5) inset;
     -webkit-box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.5) inset;
     -moz-box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.5) inset;
-    opacity:0.8;
-    &:active{
-        transform:scale(0.95);
+    border-radius: 50%;
+    padding:3px;
+    filter:blur(1px);
+
+    &:after{
+        content:"";
+        position:absolute;
+        left:0px;
+        top:0px;
+        width:100%;
+        height:100%;
+        border-radius: 50%;
+        background-color: ${({ theme }) => theme.dimmColor};
+        filter:blur(5px);
+        z-index:-1;
+        opacity:0.5;
     }
+    
+    @media(max-width:1550px){
+        display: none;
+    }
+`
+
+
+export const ColorPickerSVG = styled.svg`
+    width:100%;
+    height:100%;
+
+    rotate:${({ theme }) => theme.knobRotation};
 `
