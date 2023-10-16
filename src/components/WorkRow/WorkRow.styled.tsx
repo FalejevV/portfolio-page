@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import { PText } from "../../styles/Style.styled";
 
 import pointerCursor from "../../img/PointerCursor.png";
 
@@ -22,7 +21,7 @@ export const WorkRowContainer = styled.div`
 `
 
 export const WorkRowIndicator = styled.div<{
-    toggle:boolean
+    toggle: boolean
 }>`
     width:25px;
     height:25px;
@@ -38,7 +37,17 @@ export const WorkRowIndicator = styled.div<{
     }
 `
 
-export const WorkRowTitle = styled(PText)`
+export const WorkRowTitle = styled.button`
+
+    font-size: 27px;
+    color:${({ theme }) => theme.mainColor || "red"};
+    background-color:transparent;
+    text-align: left;
+    @media(max-width:1000px){
+        font-size:22px;
+    }
+
+    
     cursor: url(${pointerCursor}), pointer;
     position: relative;
     transition: all 0.3s;

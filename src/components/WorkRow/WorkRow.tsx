@@ -11,7 +11,7 @@ function WorkRow(props:{
     return(
         <WorkRowContainer>
             <WorkRowIndicator toggle={props.toggle}></WorkRowIndicator>
-            <WorkRowTitle onClick={() => props.onClick()} textAlign="left">{props.name}</WorkRowTitle>
+            <WorkRowTitle onClick={() => props.onClick()} >{props.name}</WorkRowTitle>
         </WorkRowContainer>
     )
 }
