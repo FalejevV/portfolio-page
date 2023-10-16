@@ -4,6 +4,7 @@ const toggleAnim = (props: { theme: { dimmColor: string } }) => keyframes`
     0%{
         z-index: 9999;
         background-color:black;
+        filter: brightness(60%); 
     }
     20%{
         background-color: ${props.theme.dimmColor};
@@ -29,7 +30,7 @@ const toggleAnim = (props: { theme: { dimmColor: string } }) => keyframes`
 export const TOEContainer = styled.div<{
     toggle: boolean,
 }>`
-    width: ${({ theme }) => `calc(${theme.maxWidth} + 5px)`};
+    width: ${({ theme }) => `calc(${theme.maxWidth} + 7px)`};
     height: ${({ theme }) => theme.maxHeight};
     background-color: black;
     left:calc(50% - 3px);
@@ -41,6 +42,7 @@ export const TOEContainer = styled.div<{
     ${({ toggle }) => toggle && css`
         animation: ${toggleAnim} 1s forwards;
     `}
+    border-radius:4px;
 
     @media(max-width:1550px){
         display: none;
