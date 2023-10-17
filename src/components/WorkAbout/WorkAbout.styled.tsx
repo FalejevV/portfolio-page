@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { PText } from "../../styles/Style.styled";
-import pointerCursor from "../../img/PointerCursor.png";
 
 export const WorkAboutContainer = styled.div`
     width:100%;
@@ -96,7 +95,7 @@ export const WorkAboutImages = styled.div`
 export const WorkAboutImage = styled.img`
     height:100%;
     object-fit: cover;
-    cursor: url(${pointerCursor}) , pointer;
+    cursor: url(${({ theme }) => theme.cursorPointer}), pointer;
     filter: sepia(100%) hue-rotate(${({ theme }) => theme.hueRotate || "100deg"}) saturate(900%) brightness(0.5);
 
     transition: all 0.3s;
@@ -143,7 +142,7 @@ export const ZoomedImageContainer = styled.div`
     max-height: ${({ theme }) => theme.maxHeight || "1000px"};
     z-index:9999;
     background-color: #0000009d;
-    cursor: url(${pointerCursor}) , pointer;
+    cursor: url(${({ theme }) => theme.cursorPointer}), pointer;
 `
 
 export const ZoomedImage = styled.img`

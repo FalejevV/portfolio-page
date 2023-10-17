@@ -1,5 +1,4 @@
 import styled, { css, keyframes } from "styled-components";
-import defaultCursor from "../img/CursorDefault.png";
 
 export const GlobalContainer = styled.div`
     position:absolute;
@@ -86,7 +85,7 @@ const glowAnimations = (props: {theme: {dimmColor:string}}) => keyframes`
 export const MainContainer = styled.main<{
     toggle:boolean,
 }>`
-    cursor:url(${defaultCursor}), default;
+    cursor: url(${({ theme }) => theme.cursorDefault}), default;
     height: ${({ theme }) => theme.maxHeight || "1000px"};
     max-width: ${({ theme }) => theme.maxWidth || "1000px"};
     max-height: ${({ theme }) => theme.maxHeight || "1000px"};
@@ -100,6 +99,9 @@ export const MainContainer = styled.main<{
     margin-top:45px;
     border-radius: 10px;
 
+    p{
+        cursor: url(${({ theme }) => theme.cursorText}), text;
+    }
     animation:${glowAnimations} 1s forwards;
     @media(max-width:1550px){
         margin-top:0px;
@@ -183,7 +185,7 @@ export const Link = styled.a`
     color:${({ theme }) => theme.mainColor || "red"};
     background-color: transparent;
     transition: all 0.3s;
-    
+    cursor: url(${({ theme }) => theme.cursorPointer}), pointer;
     position:relative;
 
     &:after{

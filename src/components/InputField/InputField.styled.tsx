@@ -1,11 +1,10 @@
 import styled, { css, keyframes } from "styled-components";
-import textCursor from "../../img/TextCurspor.png";
 export const InputContainer = styled.div`
     width:100%;
     height:50px;
     position: relative;
     display:flex;
-    cursor:url(${textCursor}), text;
+    cursor: url(${({ theme }) => theme.cursorText}), text;
 `
 
 const blink = keyframes`
@@ -83,7 +82,7 @@ export const InputFieldLabel = styled.label`
     width:100%;
     height:100%;
     border:3px solid ${({ theme }) => theme.dimmColor || "red"};
-    cursor:url(${textCursor}), text;
+    cursor: url(${({ theme }) => theme.cursorText}), text;
 `
 
 

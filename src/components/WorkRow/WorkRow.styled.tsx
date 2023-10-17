@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 
-import pointerCursor from "../../img/PointerCursor.png";
 
 export const WorkRowContainer = styled.div`
     grid-column:1/2 span;
@@ -48,7 +47,7 @@ export const WorkRowTitle = styled.button`
     }
 
     
-    cursor: url(${pointerCursor}), pointer;
+    cursor: url(${({ theme }) => theme.cursorPointer}), pointer;
     position: relative;
     transition: all 0.3s;
     padding:0px 10px;

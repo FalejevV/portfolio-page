@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import pointerCursor from "../../img/PointerCursor.png";
 
 export const ContactContainer = styled.form`
     width:calc(100vw - 55px);
@@ -21,7 +20,7 @@ export const SubmitButton = styled.button`
     color:${({ theme }) => theme.mainColor || 'red'};
     background-color: transparent;
 
-    cursor: url(${pointerCursor}), pointer;
+    cursor: url(${({ theme }) => theme.cursorPointer}), pointer;
     position: relative;
     transition: all 0.1s;
 

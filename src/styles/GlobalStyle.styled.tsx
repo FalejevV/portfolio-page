@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import textCursor from "../img/TextCurspor.png";
 
 
 export const GlobalStyle = createGlobalStyle`
@@ -27,10 +26,6 @@ export const GlobalStyle = createGlobalStyle`
     a {
     color: inherit;
     text-decoration: none;
-    }
-
-    p{
-        cursor:url(${textCursor}), text;
     }
 
     * {

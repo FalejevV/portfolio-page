@@ -1,12 +1,11 @@
 import styled from "styled-components";
-import pointerCursor from "../../img/PointerCursor.png";
 
 export const ContactContainer = styled.div`
     width:80px;
     height:80px;
     cursor:pointer;
     opacity:0.8;
-    cursor: url(${pointerCursor}), pointer;
+    cursor: url(${({ theme }) => theme.cursorPointer}), pointer;
     
     &:hover{
         opacity:1;

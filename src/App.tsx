@@ -44,6 +44,24 @@ const knobRotation = [
     "90deg"
 ]
 
+const cursors = [
+    {
+        default:"/cursor/CursorDefault.png",
+        pointer:"/cursor/PointerCursor.png",
+        text:"/cursor/TextCursor.png"
+    },
+    {
+        default:"/cursor/CursorDefaultBlue.png",
+        pointer:"/cursor/PointerCursorBlue.png",
+        text:"/cursor/TextCursorBlue.png"
+    },
+    {
+        default:"/cursor/CursorDefaultYellow.png",
+        pointer:"/cursor/PointerCursorYellow.png",
+        text:"/cursor/TextCursorYellow.png"
+    }
+]
+
 function App() {
     const [page, setPage] = useState("HOME");
     const [toggleScreen, setToggleScreen] = useState(false);
@@ -57,7 +75,10 @@ function App() {
         dimmColor: themeDimmColors[themeId],
         backgroundColor: themeBackgroundColors[themeId],
         hueRotate: hueRotation[themeId],
-        knobRotation: knobRotation[themeId]
+        knobRotation: knobRotation[themeId],
+        cursorDefault: cursors[themeId].default,
+        cursorPointer: cursors[themeId].pointer,
+        cursorText: cursors[themeId].text
     }
 
     return (
