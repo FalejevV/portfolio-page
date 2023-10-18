@@ -37,7 +37,7 @@ function UIBorderStat(props:{
                             leftCorner={props.leftCorner}
                             rightCorner={props.rightCorner || props.displayToggle}>
                                 {props.element || props.value}
-                <UIStatProgressBar progress={props.value || "50%"}></UIStatProgressBar>
+                {props.value && <UIStatProgressBar progress={props.value || "50%"}></UIStatProgressBar>}
             </UIStatValueText>
         </UIBorderStatContainer>
     )

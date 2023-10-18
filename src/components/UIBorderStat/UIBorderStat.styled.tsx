@@ -69,7 +69,7 @@ export const UIStatValueText = styled.div<{
     font-size:24px;
     position:relative;
     text-align: ${({ textAlign }) => textAlign ||"center"};
-
+    
     ${({ leftCorner }) => leftCorner && css`
         border-left:3px solid ${({ theme }) => theme.dimmColor || "red"};
     `}
@@ -165,8 +165,10 @@ export const UITitleContainer = styled.div`
     gap:16px;
     top:16.5px;
     padding-top:2px;
+    height:38px;
     @media(max-width:500px){
         top:14px;
+        height:34px;
     }
 `
 

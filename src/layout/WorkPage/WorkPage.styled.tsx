@@ -5,8 +5,8 @@ export const WorkPageContainer = styled.div`
     height:100%;
     display: flex;
     align-items: flex-start;
-    padding-bottom:4px;
-
+    padding-top:1px;
+    padding-bottom:2px;
     @media(max-width:940px){
         max-height:740px;
         margin-bottom:10px;
